@@ -1,0 +1,97 @@
+
+body{
+    background-color: rgba(0, 12, 20, 1);
+}
+
+h1{
+    color: rgba(236, 100, 1, 1);
+    font-family: "League Spartan", sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerSection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hamburguerButton{
+   width: 26.72px;
+   height: 26.72px;
+}
+.adminDiv{
+   width: 30px;
+   height: 30px;
+   background-color: white;
+   border-radius: 50%;
+   overflow: hidden;
+}
+#adminIcon{
+    width: 100%;
+    height: 100%;
+}
+#listHamburguerMenu{
+    list-style-type: none;
+}
+
+
+.listHamburguerMenu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    padding: 15px;
+    border: 3px solid rgba(236, 100, 1, 1); ;
+    width: 200px;
+    font-family: "League Spartan", sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    overflow: hidden;
+    z-index: 1;
+    transform: color 1s, box-shadow 1s;
+    transition-delay: 0s, 1s;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 30px;
+    margin-bottom: 5%;
+    /* padding-inline-start: 20px; */
+    margin-inline-end: 0%;
+    margin-block-start: 0%;
+}
+
+.listHamburguerMenu:hover {
+    border: 3px solid white ;
+}
+
+.listHamburguerMenu::before {
+    content: '';
+    height: 65px;
+    width: 0px;
+    transform: skew(35deg);
+    position: absolute;
+    left: -65px;
+    background: rgba(236, 100, 1, 1);;
+    transition: all 1s;
+    z-index: -1;
+}
+.listHamburguerMenu:hover::before {
+    width: 400px;
+}
+ul{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40%; */
+}

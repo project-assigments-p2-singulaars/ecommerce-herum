@@ -4,9 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Herum</title>
+    <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <header>
+        <div class="headerSection">
+            <div class="adminDiv">
+                <a href="#admin"><img id="adminIcon" src="/src/resources/avatarSVG.svg" alt="Admin Icon"></a>
+            </div>
+            <h1 id="herumTitle">HERUM</h1>
+            <a href="#hamburguerMenuID"><img class="hamburguerButton" src="/src/resources/hamburguericon.svg" alt="Hamburguer Icon"></a>
+        </div>
+        <nav class = "hamburguerMenu" id ="hamburguerMenuID">
+           <ul id="listHamburguerMenu">
+               <li id="home"><a href="#home" class="listHamburguerMenu">Home</a></li>             
+               <li id="product"><a href="#product" class="listHamburguerMenu">Product</a></li>
+           </ul>
+        </nav>
+    </header>
 </body>
 </html>
