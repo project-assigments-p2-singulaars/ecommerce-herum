@@ -121,3 +121,51 @@ body {
     width: 50%;
     height: 100%;
 }
+
+#on-sale {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 40px;
+    width: 90%;
+}
+
+#on-sale-catalog {
+    margin-bottom: 3vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+}
+
+#on-sale-catalog h2 {
+    font-size: 1.3rem;
+}
+
+#on-sale-catalog p {
+    color: #FA720F;
+}
+
+#on-sale-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#on-sale-slider {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+}
+
+#on-sale-slider img {
+    border-radius: 20px;
+    object-fit: cover;
+    width: 50%;
+    height: 100%;
+}
