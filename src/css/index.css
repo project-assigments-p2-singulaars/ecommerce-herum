@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000C14;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#landing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+#welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+}
+
+#welcome h2 {
+    font-size: 5vw;
+    margin-bottom: 0.1rem;
+}
+
+#welcome h2 span {
+    color: #FA720F;
+}
+
+
+#welcome hr {
+    width: 45vw;
+    background-color: #FA720F;
+    border: none;
+    height: 0.2rem;
+}
+
+#welcome p {
+    margin: 10vw;
+    text-align: left;
+    width: 100%;
+}
+
+#card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#card img {
+    border-radius: 30px;
+    margin-bottom: 2vh;
+}
+
+#card button {
+    background-color: #FA720F;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+}
