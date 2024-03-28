@@ -1,5 +1,5 @@
 const gameSection = document.getElementById("game-section-container");
-const maxGames =30;
+const maxGames =12;
 
 function createGameElement() {
   console.log(gameSection);
@@ -35,6 +35,8 @@ function createGamesList() {
     for(let index = 0; index < maxGames ; index++){
         createGameElement();
     }
+
+
 }
 
 createGamesList();
