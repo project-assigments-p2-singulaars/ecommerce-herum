@@ -18,7 +18,7 @@ nav{
     align-items: flex-end;
 }
 
-.headerSection{
+#headerSection{
     display: flex;
     justify-content: space-between;
     align-items: center;
