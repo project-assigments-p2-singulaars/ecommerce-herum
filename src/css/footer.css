@@ -16,7 +16,9 @@ footer {
     }
 
 #footer-herum-general {
+    margin-top: 1rem;
     display: flex;
+    width: 90%;
     justify-content: space-evenly;
 }
 
