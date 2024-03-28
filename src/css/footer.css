@@ -1,4 +1,4 @@
-.footer-herum {
+#footer-herum {
     color: #EC6401;
     font-weight: bold;
     display: flex;
@@ -39,4 +39,5 @@ footer hr {
 footer p {
     color: white;
     margin-bottom: 0;
+    text-align: center;
 }
