@@ -147,6 +147,10 @@
   border-radius: 16px;
 }
 
+ a{
+  text-decoration: none;
+}
+
 .price-icon-container:hover{
   background-color: #be4f00;
 }

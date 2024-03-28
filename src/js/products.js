@@ -1,13 +1,10 @@
 const gameSection = document.getElementById("game-section-container");
-const maxGames =12;
+const maxGames = 10;
 
 function createGameElement() {
   console.log(gameSection);
 
   let gameContainer = document.createElement("div");
-  //1 tipo de elemento a crear
-
-  //2 añadir clase
 
   gameContainer.classList.add("game-items-container");
 
@@ -15,11 +12,12 @@ function createGameElement() {
   gameImage.src = "../../assets/img/Rectangle 10.png";
   gameImage.alt = "";
 
-  let priceContainer = document.createElement("div");
+  let priceContainer = document.createElement("a");
   priceContainer.classList.add("price-icon-container");
+  priceContainer.href = ""
 
   let priceTag = document.createElement("p");
-  priceTag.textContent = "19,95€"
+  priceTag.textContent = "19,95€";
 
   let cartLogo = document.createElement("img");
   cartLogo.src = "../../assets/icons/car.svg";
@@ -27,16 +25,14 @@ function createGameElement() {
 
   priceContainer.append(priceTag, cartLogo);
 
-  gameContainer.append(gameImage, priceContainer)
-  gameSection.appendChild(gameContainer)
+  gameContainer.append(gameImage, priceContainer);
+  gameSection.appendChild(gameContainer);
 }
 
 function createGamesList() {
-    for(let index = 0; index < maxGames ; index++){
-        createGameElement();
-    }
-
-
+  for (let index = 0; index < maxGames; index++) {
+    createGameElement();
+  }
 }
 
 createGamesList();
