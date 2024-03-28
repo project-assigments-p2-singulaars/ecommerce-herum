@@ -1,19 +1,4 @@
 
-const bodyElement = document.body;
-// const navHamburguer = document.getElementById('hamburguerMenuID');
-
-// const buttonHamburguer = document.getElementById("idbutton");
-// const menuHamburguer = document.getElementById('hamburguerMenuID');
-
-// function toggleMenu() {
-
-//      const isMenuVisible = menuHamburguer.style.display === "flex";
-    
-//      menuHamburguer.style.display = isMenuVisible ? "none" : "flex";
-//  }
-
-// buttonHamburguer.addEventListener("click", toggleMenu)
-
 function createHeaderSection(){
     let headerSectionContainer = document.createElement('div');
     
@@ -39,7 +24,7 @@ function createHeaderSection(){
     buttonHamburguer.id = "idbutton";
     buttonHamburguer.classList.add('buttonHamburguer');
     buttonHamburguer.alt = 'Hamburguer Button';
-    buttonHamburguer.onclick = 'toggleMenu()'
+    buttonHamburguer.onclick = toggleMenu;
 
     let anchorButtonHamburguer = document.createElement('a');
     anchorButtonHamburguer.href='#hamburguerMenuID';
@@ -57,12 +42,6 @@ function createHeaderSection(){
 
     headerSectionContainer.append(adminContainer,herumTitle,buttonHamburguer);
 
-    // buttonHamburguer.addEventListener('click', toggleMenu());
-
-    
-
-// buttonHamburguer.addEventListener("click", toggleMenu)
-
     return headerSectionContainer;
 }
 
@@ -76,18 +55,19 @@ function createMenuHamburguer(){
 
     let listHomeHamburguer = document.createElement('li');
     listHomeHamburguer.id ='home';
-
+ 
     let anchorhome = document.createElement('a');
     anchorhome.href='#home';
     anchorhome.classList.add('listHamburguerMenu');
-
+    anchorhome.textContent = 'Home';
 
     let listProductHamburguer = document.createElement('li');
     listProductHamburguer.id ='product';
-
+    
     let anchorproduct = document.createElement('a');
     anchorproduct.href='#product';
     anchorproduct.classList.add('listHamburguerMenu');
+    anchorproduct.textContent = 'Product';
 
     listProductHamburguer.appendChild(anchorproduct);
     listHomeHamburguer.appendChild(anchorhome);
@@ -95,13 +75,18 @@ function createMenuHamburguer(){
     ulHamburguer.append(listHomeHamburguer,listProductHamburguer);
     navHamburguerContainer.appendChild(ulHamburguer);
 
-    
     return navHamburguerContainer;
 }
 
+function toggleMenu() {
+    const headerHiddenNavBar = document.getElementById('hamburguerMenuID');
+    const isMenuVisible = headerHiddenNavBar.style.display === "flex";
+  
+     headerHiddenNavBar.style.display = isMenuVisible ? "none" : "flex";
+  }
 
 function createHeader(){
-
+    const bodyElement = document.body;
     let headerContainer = document.createElement('header');
 
     let headerNavBar = createHeaderSection();
@@ -109,26 +94,14 @@ function createHeader(){
 
     let buttonHamburguer = document.getElementById('idbutton');
     
-
-    function toggleMenu() {
-
-      const isMenuVisible = headerHiddenNavBar.style.display === "flex";
-    
-       headerHiddenNavBar.style.display = isMenuVisible ? "none" : "flex";
-    }
-
-    
-
     headerContainer.append(headerNavBar,headerHiddenNavBar);
     bodyElement.appendChild(headerContainer);
 
     buttonHamburguer.addEventListener("click", toggleMenu);
 }
 
-
 createHeader();
 
-// createHeaderSection();
 
 
 
@@ -148,20 +121,4 @@ createHeader();
 
 
 
-
-
-
-//BUTTON HAMBURGUER
-
-// const buttonHamburguer = document.getElementById("idbutton");
-// const menuHamburguer = document.getElementById('hamburguerMenuID');
-
-// function toggleMenu() {
-
-//      const isMenuVisible = menuHamburguer.style.display === "flex";
-    
-//      menuHamburguer.style.display = isMenuVisible ? "none" : "flex";
-//  }
-
-// buttonHamburguer.addEventListener("click", toggleMenu)
 
