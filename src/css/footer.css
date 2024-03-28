@@ -1,3 +1,13 @@
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
 #footer-herum {
     color: #EC6401;
     font-weight: bold;
@@ -5,12 +15,10 @@
     justify-content: center;
     }
 
-body {
-    background-color: black;
-}
-
 #footer-herum-general {
+    margin-top: 1rem;
     display: flex;
+    width: 90%;
     justify-content: space-evenly;
 }
 
@@ -19,6 +27,9 @@ footer a {
     color: white;
 }
 
+#final-line {
+    margin-top: 2rem;
+}
 
 footer hr {
     background-color: white;

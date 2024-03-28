@@ -73,7 +73,7 @@ function generateFooter () {
     // Location container
     let locationContainer = document.createElement("div");
     locationContainer.id = "footer-right";
-    locationContainer.classList.add = "footer-social-container";
+    locationContainer.classList.add("footer-social-container");
 
     let locationLogo = document.createElement("img");
     locationLogo.src = "../img/Vector.svg";
@@ -87,7 +87,8 @@ function generateFooter () {
     locationContainer.appendChild(locationLink);
     
     let footerBottomLine = document.createElement("hr");
-
+    footerBottomLine.id = "final-line";
+    
     footerRightContainer.appendChild(locationContainer);
 
     footerContainer.append(footerLeftContainer, footerRightContainer);
