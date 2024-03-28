@@ -1,0 +1,43 @@
+#footer-herum {
+    color: #EC6401;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    }
+
+body {
+    background-color: black;
+}
+
+#footer-herum-general {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+
+footer hr {
+    background-color: white;
+    padding: 0.02rem;
+    width: 90%;
+    margin-bottom: 1.5rem;
+}
+
+.footer-contact-section {
+    text-align: center;
+}
+
+.footer-social-container {
+    display: flex;
+    gap: 1rem;
+}
+
+footer p {
+    color: white;
+    margin-bottom: 0;
+    text-align: center;
+}
