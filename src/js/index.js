@@ -5,6 +5,9 @@ function createGameImage() {
     let gameImage = document.createElement("img");
     gameImage.src = "../templates/Rectangle 7.png"
 
+    gameImage.addEventListener("click", () => {
+        window.open("../templates/detailedProduct.html","_self")
+    })
     return gameImage;
 }
 
@@ -17,6 +20,9 @@ function createRatedGameElement() {
 
     let seeMoreRatings = document.createElement("p");
     seeMoreRatings.textContent = "see more";
+    seeMoreRatings.addEventListener("click", () => {
+        window.open("../templates/product-page.html","_self")
+    })
 
     let gamesContainer = document.createElement("div");
     gamesContainer.id="games-container";
@@ -46,6 +52,9 @@ function createOnSaleElement() {
 
     let seeMoreSales = document.createElement("p");
     seeMoreSales.textContent = "see more";
+    seeMoreSales.addEventListener("click", () => {
+        window.open("../templates/product-page.html","_self")
+    })
 
     let onSaleContainer = document.createElement("div");
     onSaleContainer.id= "on-sale-container";
