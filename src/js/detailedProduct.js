@@ -92,8 +92,11 @@ function createProductInfoSection() {
 }
 
 function generateDetailedProduct() {
-    const detailedProductFatherElement = document.getElementById("detailed-product");
-    
+    const bodyElement = document.body;
+    const mainElement = document.createElement("main");
+
+    const detailedProductFatherElement = document.createElement("section");
+    detailedProductFatherElement.id = "detailed-product";
     
     let productBackground = document.createElement("div");
     productBackground.id= "detailed-product-background"
@@ -112,7 +115,9 @@ function generateDetailedProduct() {
     productBackground.appendChild(footerSection);
 
     detailedProductFatherElement.appendChild(productBackground);
-}
+    mainElement.appendChild(detailedProductFatherElement);
 
+    bodyElement.appendChild(mainElement)
+}
 
 generateDetailedProduct();
