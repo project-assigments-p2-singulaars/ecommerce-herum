@@ -1,4 +1,9 @@
 
+p{
+    color: white;
+    display: flex;
+    justify-content:f
+}
 body{
     background-color: rgba(0, 12, 20, 1);
 }
