@@ -9,6 +9,12 @@
   /* fonts */
   --font-main: "League Spartan";
 }
+/* 
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
 
 * {
   margin: 0;
@@ -21,7 +27,7 @@
 
 .filter-bars-container {
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -52,7 +58,7 @@
 #search-container input {
   width: 100%;
   height: 100%;
-  border-radius: 36px;
+  border-radius: 2.25rem;
   border: none;
   text-align: center;
   position: absolute;
@@ -61,17 +67,17 @@
 
 #search-container input::placeholder {
   text-align: end;
-  margin-left: 20px;
+  margin-left: 1.25rem;
 }
 
-.box-icon-form {
-  margin-left: 10px;
+#box-icon-form {
+  margin-left: 0.625rem;
   position: absolute;
   z-index: 1;
 }
 
-.box-icon-form img {
-  width: 20px;
+#box-icon-form img {
+  width: 1.25rem;
 }
 
 #filter-container {
@@ -147,11 +153,11 @@
   border-radius: 16px;
 }
 
- a{
+a {
   text-decoration: none;
 }
 
-.price-icon-container:hover{
+.price-icon-container:hover {
   background-color: #be4f00;
 }
 
@@ -167,7 +173,7 @@
   background-color: transparent;
 }
 
-#see-more-btn a{
+#see-more-btn a {
   background-color: var(--color-secondary);
   text-decoration: none;
   padding: 10px 15px;
@@ -177,7 +183,7 @@
   font-weight: 500;
 }
 
-#see-more-btn a:hover{
+#see-more-btn a:hover {
   background-color: #be4f00;
 }
 
