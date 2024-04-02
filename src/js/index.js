@@ -1,4 +1,3 @@
-const topRating = document.getElementById("top-rating");
 const maxGames = 4;
 
 function createGameImage() {
@@ -11,7 +10,52 @@ function createGameImage() {
     return gameImage;
 }
 
+function createLandingSection() {
+    let landingSection = document.createElement("section");
+    landingSection.id = "landing";
+
+    let welcomeContainer = document.createElement("div");
+    welcomeContainer.id="welcome";
+
+    let welcomeTitle = document.createElement("h2");
+    welcomeTitle.textContent = "BIENVENIDOS A ";
+
+    let pageTitleSpan = document.createElement("span");
+    pageTitleSpan.textContent = "HERUM";
+
+    welcomeTitle.appendChild(pageTitleSpan);
+
+    let hrElement = document.createElement("hr");
+
+    let landingDescription = document.createElement("p");
+    landingDescription.textContent = " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut ea itaque dolore assumenda esse eveniet debitis corrupti voluptatibus commodi?"
+
+    welcomeContainer.append(welcomeTitle, hrElement, landingDescription)
+
+    let seeCatalogContainer = document.createElement("div");
+    seeCatalogContainer.id = "card";
+
+    let backgroundImage = document.createElement("img");
+    backgroundImage.src="Rectangle 5 (1).png";
+
+    let catalogButton = document.createElement("button");
+    catalogButton.textContent = "SEE CATALOG";
+
+    catalogButton.addEventListener("click", () => {
+        window.open("../templates/product-page.html","_self")
+    })
+
+    seeCatalogContainer.append(backgroundImage, catalogButton);
+
+    landingSection.append(welcomeContainer, seeCatalogContainer);
+
+    return landingSection;
+}
+
 function createRatedGameElement() {
+    let topRating = document.createElement("section");
+    topRating.id="top-rating";
+
     let topRatingCatalog = document.createElement("div");
     topRatingCatalog.id="top-rating-catalog";
 
@@ -39,11 +83,15 @@ function createRatedGameElement() {
     topRatingCatalog.append(topRatingTitle, seeMoreRatings);
     gamesContainer.appendChild(topRatingSlider)
     topRating.append(topRatingCatalog, gamesContainer)
+
+    return topRating;
 }
 
-const onSale = document.getElementById("on-sale");
-
 function createOnSaleElement() {
+    let onSale = document.createElement("section");
+    onSale.id= "on-sale";
+
+
     let onSaleCatalog = document.createElement("div");
     onSaleCatalog.id= "on-sale-catalog";
 
@@ -71,7 +119,22 @@ function createOnSaleElement() {
     onSaleCatalog.append(onSaleTitle, seeMoreSales);
     onSaleContainer.appendChild(onSaleSlider);
     onSale.append(onSaleCatalog, onSaleContainer);
+
+    return onSale;
 }
 
-createRatedGameElement();
-createOnSaleElement();
+function generateHomeContent() {
+    const bodyElement = document.body;
+
+    let mainSection = document.createElement("main");
+
+    let landingElement = createLandingSection();
+    let ratingElement = createRatedGameElement();
+    let salesElement = createOnSaleElement();
+
+    mainSection.append(landingElement, ratingElement, salesElement);
+
+    bodyElement.appendChild(mainSection);
+}
+
+generateHomeContent();

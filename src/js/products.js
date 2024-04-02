@@ -2,8 +2,6 @@ const gameSection = document.getElementById("game-section-container");
 const maxGames = 10;
 
 function createGameElement() {
-  console.log(gameSection);
-
   let gameContainer = document.createElement("div");
 
   gameContainer.classList.add("game-items-container");
