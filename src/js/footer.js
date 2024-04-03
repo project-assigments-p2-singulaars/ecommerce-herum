@@ -87,6 +87,7 @@ function generateFooter () {
     locationContainer.appendChild(locationLink);
     
     let footerBottomLine = document.createElement("hr");
+    footerBottomLine.id = "final-line"
 
     footerRightContainer.appendChild(locationContainer);
 
