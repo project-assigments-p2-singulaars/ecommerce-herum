@@ -7,11 +7,15 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "vitest"
+    "test": "vitest",
+    "start": "json-server --watch src/games.json"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "vitest": "^1.4.0"
+  },
+  "dependencies": {
+    "json-server": "^1.0.0-alpha.23"
   }
 }
