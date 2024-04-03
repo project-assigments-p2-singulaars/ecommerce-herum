@@ -57,17 +57,23 @@ function createMenuHamburguer(){
     listHomeHamburguer.id ='home';
  
     let anchorhome = document.createElement('a');
-    anchorhome.href='#home';
     anchorhome.classList.add('listHamburguerMenu');
     anchorhome.textContent = 'Home';
+
+    anchorhome.addEventListener("click", () => {
+        window.open("../templates/index.html","_self")
+    })
 
     let listProductHamburguer = document.createElement('li');
     listProductHamburguer.id ='product';
     
     let anchorproduct = document.createElement('a');
-    anchorproduct.href='#product';
     anchorproduct.classList.add('listHamburguerMenu');
     anchorproduct.textContent = 'Product';
+
+    anchorproduct.addEventListener("click", () => {
+        window.open("../templates/product-page.html","_self")
+    })
 
     listProductHamburguer.appendChild(anchorproduct);
     listHomeHamburguer.appendChild(anchorhome);
