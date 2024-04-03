@@ -7,7 +7,8 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "vitest"
+    "test": "vitest",
+    "start": "json-server --watch src/games.json"
   },
   "author": "",
   "license": "ISC",
