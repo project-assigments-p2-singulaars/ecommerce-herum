@@ -2,6 +2,8 @@ const gameSection = document.getElementById("game-section-container");
 const filters = ["Top Rating", "Categories", "Sales", "Platforms"];
 const allGames = 10;
 
+let gameElements = [];
+
 import {
   fetchData,
   searchFilterByName,
@@ -12,6 +14,22 @@ import {
 } from "./fetch.js";
 import { createHeader } from "./header.js";
 import { generateFooter } from "./footer.js";
+
+function updateList(newVideogames) {
+  const videogamesSection = document.getElementById("game-section-container")
+  videogamesSection.innerHTML = "";
+
+  let limiter = allGames;
+
+  if (newVideogames.length < allGames) {
+    limiter = newVideogames.length;
+  }
+
+  for (let index = 0; index < limiter; index++) {
+    let gameElement = createGameElement(newVideogames[index]);
+    videogamesSection.appendChild(gameElement);
+  }
+}
 
 function createSearchBar() {
   let searchContainer = document.createElement("section");
@@ -36,10 +54,12 @@ function createSearchBar() {
   searchInput.type = "text";
   searchInput.placeholder = "Search";
 
-  searchIcon.addEventListener("click", () => {
+  searchIcon.addEventListener("click", async () => {
     const searchValue = searchInput.value.toLowerCase();
 
-    searchFilterByName(searchValue);
+    gameElements =  await searchFilterByName(searchValue);
+
+    updateList(gameElements);
   });
 
   labelElement.append(searchIconContainer, searchInput);
@@ -59,21 +79,25 @@ function createFilterElement(filterValue) {
 
   filterContainer.appendChild(contentFilter);
 
-  filterContainer.addEventListener("click", () => {
+  filterContainer.addEventListener("click", async () => {
+    let games;
+
     switch (filterValue) {
       case "Top Rating":
-        filterTopRating();
+        games = await filterTopRating();
         break;
       case "Categories":
-        filterByCategories();
+        games = await filterByCategories();
         break;
       case "Sales":
-        filterTopSales();
+        games = await filterTopSales();
         break;
       case "Platforms":
-        filterByPlatforms();
+        games = await filterByPlatforms();
         break;
     }
+
+    updateList(games)
   });
   return filterContainer;
 
@@ -96,7 +120,6 @@ function createGameElement(videogame) {
   let gameContainer = document.createElement("div");
 
   gameContainer.classList.add("game-items-container");
-  console.log(videogame);
   let gameImage = document.createElement("img");
   gameImage.src = videogame.image.url;
   gameImage.alt = videogame.image.imageAlt;
@@ -123,8 +146,7 @@ async function createGamesList() {
   let gameSection = document.createElement("section");
   gameSection.id = "game-section-container";
 
-  const gameElements = await fetchData();
-  console.log(gameElements);
+  gameElements = await fetchData();
 
   let limiter = allGames;
 
