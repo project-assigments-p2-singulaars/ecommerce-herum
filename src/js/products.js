@@ -1,12 +1,14 @@
 const gameSection = document.getElementById("game-section-container");
 const filters = ["Top Rating", "Categories", "Sales", "Platforms"];
-const maxGames = 10;
+const allGames = 10;
 
-
+import { fetchData } from "./fetch.js";
+import { createHeader } from "./header.js";
+import { generateFooter } from "./footer.js";
 
 function createSearchBar() {
   let searchContainer = document.createElement("section");
-  searchContainer.id="search-container";
+  searchContainer.id = "search-container";
 
   let labelElement = document.createElement("label");
   labelElement.htmlFor = "search";
@@ -36,12 +38,12 @@ function createSearchBar() {
 function createFilterElement(filterValue) {
   let filterContainer = document.createElement("div");
   filterContainer.classList.add("filter-items");
-  filterContainer.id= "filter"+filterValue;
+  filterContainer.id = "filter" + filterValue;
 
   let contentFilter = document.createElement("p");
   contentFilter.textContent = filterValue;
 
-  filterContainer.appendChild(contentFilter)
+  filterContainer.appendChild(contentFilter);
 
   return filterContainer;
 }
@@ -50,30 +52,30 @@ function createFilterSection() {
   let filterSection = document.createElement("section");
   filterSection.id = "filter-container";
 
-  filters.map(filter => {
+  filters.map((filter) => {
     let filterElement = createFilterElement(filter);
 
     filterSection.appendChild(filterElement);
-  })
+  });
 
   return filterSection;
 }
 
-function createGameElement() {
+function createGameElement(videogame) {
   let gameContainer = document.createElement("div");
 
   gameContainer.classList.add("game-items-container");
-
+  console.log(videogame);
   let gameImage = document.createElement("img");
-  gameImage.src = "../../assets/img/Rectangle 10.png";
-  gameImage.alt = "";
+  gameImage.src = videogame.image.url;
+  gameImage.alt = videogame.image.imageAlt;
 
   let priceContainer = document.createElement("a");
   priceContainer.classList.add("price-icon-container");
-  priceContainer.href = ""
+  priceContainer.href = "";
 
   let priceTag = document.createElement("p");
-  priceTag.textContent = "19,95€";
+  priceTag.textContent = videogame.price;
 
   let cartLogo = document.createElement("img");
   cartLogo.src = "../../assets/icons/car.svg";
@@ -83,15 +85,24 @@ function createGameElement() {
 
   gameContainer.append(gameImage, priceContainer);
 
-  return gameContainer; 
+  return gameContainer;
 }
 
-function createGamesList() {
+async function createGamesList() {
   let gameSection = document.createElement("section");
-  gameSection.id ="game-section-container";
+  gameSection.id = "game-section-container";
 
-  for (let index = 0; index < maxGames; index++) {
-    let gameElement = createGameElement();
+  const gameElements = await fetchData();
+  console.log(gameElements);
+
+  let limiter = allGames;
+
+  if (gameElements.length < allGames) {
+    limiter = gameElements.length;
+  }
+
+  for (let index = 0; index < limiter; index++) {
+    let gameElement = createGameElement(gameElements[index]);
     gameSection.appendChild(gameElement);
   }
 
@@ -110,19 +121,27 @@ function createSeeMoreSection() {
   return seeMoreSection;
 }
 
-function generateProductSection() {
+async function generateProductSection() {
+  createHeader();
   const bodyElement = document.body;
   let mainElement = document.createElement("main");
-  mainElement.classList.add("filter-bars-container")
-
+  mainElement.classList.add("filter-bars-container");
   let searchElement = createSearchBar();
   let filtersElement = createFilterSection();
-  let catalogElement = createGamesList();
+  let catalogElement = await createGamesList();
   let seeMoreElement = createSeeMoreSection();
+  
 
-  mainElement.append(searchElement, filtersElement, catalogElement, seeMoreElement)
+  mainElement.append(
+    searchElement,
+    filtersElement,
+    catalogElement,
+    seeMoreElement
+  );
 
   bodyElement.appendChild(mainElement);
+  generateFooter();
+
 }
 
 generateProductSection();

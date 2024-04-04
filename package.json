@@ -13,9 +13,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "json-server": "^1.0.0-alpha.23",
     "vitest": "^1.4.0"
-  },
-  "dependencies": {
-    "json-server": "^1.0.0-alpha.23"
   }
 }
