@@ -2,7 +2,14 @@ const gameSection = document.getElementById("game-section-container");
 const filters = ["Top Rating", "Categories", "Sales", "Platforms"];
 const allGames = 10;
 
-import { fetchData } from "./fetch.js";
+import {
+  fetchData,
+  searchFilterByName,
+  filterByCategories,
+  filterByPlatforms,
+  filterTopRating,
+  filterTopSales,
+} from "./fetch.js";
 import { createHeader } from "./header.js";
 import { generateFooter } from "./footer.js";
 
@@ -19,6 +26,7 @@ function createSearchBar() {
   let searchIcon = document.createElement("img");
   searchIcon.src = "../../assets/icons/lupa.svg";
   searchIcon.alt = "searchIcon";
+  searchIcon.id = "searchIcon";
 
   searchIconContainer.appendChild(searchIcon);
 
@@ -27,6 +35,12 @@ function createSearchBar() {
   searchInput.name = "name";
   searchInput.type = "text";
   searchInput.placeholder = "Search";
+
+  searchIcon.addEventListener("click", () => {
+    const searchValue = searchInput.value.toLowerCase();
+
+    searchFilterByName(searchValue);
+  });
 
   labelElement.append(searchIconContainer, searchInput);
 
@@ -45,7 +59,24 @@ function createFilterElement(filterValue) {
 
   filterContainer.appendChild(contentFilter);
 
+  filterContainer.addEventListener("click", () => {
+    switch (filterValue) {
+      case "Top Rating":
+        filterTopRating();
+        break;
+      case "Categories":
+        filterByCategories();
+        break;
+      case "Sales":
+        filterTopSales();
+        break;
+      case "Platforms":
+        filterByPlatforms();
+        break;
+    }
+  });
   return filterContainer;
+
 }
 
 function createFilterSection() {
@@ -130,7 +161,6 @@ async function generateProductSection() {
   let filtersElement = createFilterSection();
   let catalogElement = await createGamesList();
   let seeMoreElement = createSeeMoreSection();
-  
 
   mainElement.append(
     searchElement,
@@ -141,7 +171,6 @@ async function generateProductSection() {
 
   bodyElement.appendChild(mainElement);
   generateFooter();
-
 }
 
 generateProductSection();
