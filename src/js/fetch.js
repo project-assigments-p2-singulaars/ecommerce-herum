@@ -9,7 +9,6 @@ export async function fetchData() {
   try {
     const response = await fetch(apiUrl);
     const result = await response.json();
-    console.log(result);
     return result;
   } catch (error) {
     console.log(error);
@@ -17,21 +16,14 @@ export async function fetchData() {
 }
 
 export async function searchFilterByName(searchvalue) {
-  await fetch(apiUrl)
+  return await fetch(apiUrl)
     .then((response) => response.json())
     .then((data) => {
       const filteredVideogames = data.filter((videogames) =>
         videogames.game.toLowerCase().includes(searchvalue)
       );
 
-      filteredVideogames.map((videogames) => {
-        // const list = document.createElement("li");
-        // list.textContent = videogames.game;
-        // list.addEventListener("click", () => {
-        //   showVideogamescard(videogames);
-        // });
-        console.log(filteredVideogames);
-      });
+      return filteredVideogames;
     });
 }
 
@@ -47,15 +39,13 @@ export async function filterTopSales() {
           filteredVideogames.push(videogame);
         }
       });
-      console.log(filteredVideogames);
       return filteredVideogames;
     });
-    console.log(filterGames)
     return filterGames;
 }
 
 export async function filterTopRating() {
-  await fetch(apiUrl)
+  return await fetch(apiUrl)
     .then((response) => response.json())
     .then((data) => {
       let filteredVideogames = [];
@@ -65,13 +55,12 @@ export async function filterTopRating() {
           filteredVideogames.push(videogame);
         }
       });
-      console.log(filteredVideogames);
       return filteredVideogames;
     });
 }
 
 export async function filterByPlatforms() {
-  await fetch(apiUrl)
+  return await fetch(apiUrl)
     .then((response) => response.json())
     .then((data) => {
       let filteredVideogames = [];
@@ -81,13 +70,12 @@ export async function filterByPlatforms() {
           filteredVideogames.push(videogame);
         }
       });
-      console.log(filteredVideogames);
       return filteredVideogames;
     });
 }
 
 export async function filterByCategories() {
-  await fetch(apiUrl)
+  return await fetch(apiUrl)
     .then((response) => response.json())
     .then((data) => {
       let filteredVideogames = [];
@@ -97,7 +85,6 @@ export async function filterByCategories() {
           filteredVideogames.push(videogame);
         }
       });
-      console.log(filteredVideogames);
       return filteredVideogames;
     });
 }
