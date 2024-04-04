@@ -1,6 +1,6 @@
 // const { createExpect } = require("vitest");
 
-function generateFooter () {
+export function generateFooter () {
     const bodyElement = document.body;
 
     let footerElement = document.createElement("footer");
@@ -100,7 +100,7 @@ function generateFooter () {
 
 }
 
-generateFooter();
+// generateFooter();
 
 
 

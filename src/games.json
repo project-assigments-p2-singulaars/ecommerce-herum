@@ -3,14 +3,14 @@
     [
        {
            "id" : 1,
-           "name": "Baldur's Gate III",
+           "game": "Baldur's Gate III",
            "description": "An ancient evil has returned to Baldur's Gate, intent on devouring it from the inside out. The fate of Faerun lies in your hands. Alone, you may resist. But together, you can overcome.",
            "price": "59.99€",
            "pegi": 18,
            "rating": 9.4,
            "image": 
                 {
-                    "name": "Baldur's 3 image",
+                    "imageAlt": "Baldur's 3 image",
                     "url": "../img/baldursgate3.webp"
                 },
             "developer": "Larian StudiosPublisher",
@@ -22,14 +22,14 @@
         },
         {
             "id" : 2,
-            "name": "Final Fantasy VII Rebirth",
+            "game": "Final Fantasy VII Rebirth",
             "description": "Final Fantasy VII Rebirth is the highly anticipated new story in the Final Fantasy VII remake project, a reimagining of the iconic original game into three standalone titles by its original creators. In this game, Cloud and his comrades escape the city of Midgar in pursuit of the fallen hero, Sephiroth – as they travel across the world, they find themselves on a journey that will decide the fate of the planet. Players will enjoy various new elements as the story unfolds, culminating in the party’s journey to The Forgotten Capital from the original Final Fantasy VII.",
             "price": "79.90€",
             "pegi": 16,
             "rating": 9.2,
             "image": 
                 {
-                    "name": "Final Fantasy VII Rebirth image",
+                    "imageAlt": "Final Fantasy VII Rebirth image",
                     "url": "../img/finalfantasyviirebirth.webp"
                 },
              "developer": "Square Enix",
@@ -40,14 +40,14 @@
         },
         {
             "id" : 3,
-            "name": "Elden Ring",
+            "game": "Elden Ring",
             "description": "The Golden Order has been broken. Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring and become an Elden Lord in the Lands Between. In the Lands Between ruled by Queen Marika the Eternal, the Elden Ring, the source of the Erdtree, has been shattered. Marika's offspring, demigods all, claimed the shards of the Elden Ring known as the Great Runes, and the mad taint of their newfound strength triggered a war: The Shattering. A war that meant abandonment by the Greater Will. And now the guidance of grace will be brought to the Tarnished who were spurned by the grace of gold and exiled from the Lands Between. Ye dead who yet live, your grace long lost, follow the path to the Lands Between beyond the foggy sea to stand before the Elden Ring. And become the Elden Lord.",
             "price": "59.99€",
             "pegi": 18,
             "rating": 9.3,
             "image": 
                 {
-                    "name": "Elden Ring image",
+                    "imageAlt": "Elden Ring image",
                     "url": "../img/eldenring.webp"
                 },
              "developer": "FromSoftware",
@@ -58,14 +58,14 @@
         },
         {
             "id" : 4,
-            "name": "Cyberpunk 2077",
+            "game": "Cyberpunk 2077",
             "description": "Cyberpunk 2077 is an open-world, action-adventure story set in Night City, a megalopolis obsessed with power, glamour and body modification. You play as V, a mercenary outlaw going after a one-of-a-kind implant that is the key to immortality.",
             "price": "29.99€",
             "pegi": 18,
             "rating": 8.1,
             "image": 
                 {
-                    "name": "Cyberpunk 2077 image",
+                    "imageAlt": "Cyberpunk 2077 image",
                     "url": "../img/cyberpunk2077.webp"
                 },
              "developer": "CD Projekt RED",
@@ -76,14 +76,14 @@
         },
         {
             "id" : 5,
-            "name": "Portal 2",
+            "game": "Portal 2",
             "description": "Portal 2 draws from the award-winning formula of innovative gameplay, story, and music that earned the original Portal over 70 industry accolades and created a cult following. The single-player portion of Portal 2 introduces a cast of dynamic new characters, a host of fresh puzzle elements, and a much larger set of devious test chambers. Players will explore never-before-seen areas of the Aperture Science Labs and be reunited with GLaDOS, the occasionally murderous computer companion who guided them through the original game. The game’s two-player cooperative mode features its own entirely separate campaign with a unique story, test chambers, and two new player characters. This new mode forces players to reconsider everything they thought they knew about portals. Success will require them to not just act cooperatively, but to think cooperatively.",
             "price": "9.75",
             "pegi": 12,
             "rating": 9.1,
             "image": 
                 {
-                    "name": "Portal 2 image",
+                    "imageAlt": "Portal 2 image",
                     "url": "../img/portal2.webp"
                 },
              "developer": "Valve Corporation",
@@ -94,14 +94,14 @@
         },
         {
             "id" : 6,
-            "name": "Red Dead Redemption 2",
+            "game": "Red Dead Redemption 2",
             "description": "Red Dead Redemption 2 is an epic tale of life in America's unforgiving heartland. The game's vast and atmospheric world will also provide the foundation for a brand new online multiplayer experience.",
             "price": "59.99",
             "pegi": 18,
             "rating": 9.3,
             "image": 
                 {
-                   "name": "Red Dead Redemption 2 image",
+                   "imageAlt": "Red Dead Redemption 2 image",
                    "url": "../img/reddeadredemption2.webp"
                 },
              "developer": "Rockstar Studios",
@@ -110,6 +110,5 @@
              "platforms": ["Google Stadia","PC","PlayStation 4","Xbox One"],
              "tags": ["Top 10","Popular Games"]  
         }
-
     ]
 }

@@ -91,7 +91,7 @@ function toggleMenu() {
      headerHiddenNavBar.style.display = isMenuVisible ? "none" : "flex";
   }
 
-function createHeader(){
+  export function createHeader(){
     const bodyElement = document.body;
     let headerContainer = document.createElement('header');
 
@@ -103,7 +103,7 @@ function createHeader(){
 
 }
 
-createHeader();
+// createHeader();
 
 
 
