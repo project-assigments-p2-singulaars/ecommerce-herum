@@ -1,8 +1,14 @@
 const maxGames = 4;
 
-function createGameImage() {
+import {
+    fetchData,
+    filterTopRating,
+    filterTopSales,
+} from "./fetch.js"
+
+function createGameImage(videogame) {
     let gameImage = document.createElement("img");
-    gameImage.src = "../templates/Rectangle 7.png"
+    gameImage.src = videogame.image.url
 
     gameImage.addEventListener("click", () => {
         window.open("../templates/detailedProduct.html","_self")
@@ -52,7 +58,7 @@ function createLandingSection() {
     return landingSection;
 }
 
-function createRatedGameElement() {
+function createRatedGameElement(videogames) {
     let topRating = document.createElement("section");
     topRating.id="top-rating";
 
@@ -73,9 +79,9 @@ function createRatedGameElement() {
 
     let topRatingSlider = document.createElement("div");
     topRatingSlider.id="top-rating-slider";
-    
+    console.log(videogames)
     for(let index = 0; index < maxGames ; index++) {
-        let element = createGameImage();
+        let element = createGameImage(videogames[index]);
 
         topRatingSlider.appendChild(element)
     }
@@ -87,7 +93,7 @@ function createRatedGameElement() {
     return topRating;
 }
 
-function createOnSaleElement() {
+async function createOnSaleElement(videogames) {
     let onSale = document.createElement("section");
     onSale.id= "on-sale";
 
@@ -106,12 +112,13 @@ function createOnSaleElement() {
 
     let onSaleContainer = document.createElement("div");
     onSaleContainer.id= "on-sale-container";
+    console.log(videogames)
 
     let onSaleSlider = document.createElement("div");
     onSaleSlider.id= "on-sale-slider";
 
     for(let index = 0; index < maxGames ; index++) {
-        let element = createGameImage();
+        let element = createGameImage(videogames[index]);
 
         onSaleSlider.appendChild(element)
     }
@@ -123,14 +130,16 @@ function createOnSaleElement() {
     return onSale;
 }
 
-function generateHomeContent() {
+async function generateHomeContent() {
     const bodyElement = document.body;
 
+    let topSaleGames = await filterTopSales();
+    console.log(topSaleGames)
     let mainSection = document.createElement("main");
 
     let landingElement = createLandingSection();
-    let ratingElement = createRatedGameElement();
-    let salesElement = createOnSaleElement();
+    let ratingElement = await createRatedGameElement(topSaleGames);
+    let salesElement = await createOnSaleElement(topSaleGames);
 
     mainSection.append(landingElement, ratingElement, salesElement);
 
