@@ -37,7 +37,7 @@ export async function searchFilterByName(searchvalue) {
 
 
 export async function filterTopSales() {
-  await fetch(apiUrl)
+  const filterGames = await fetch(apiUrl)
     .then((response) => response.json())
     .then((data) => {
       let filteredVideogames = [];
@@ -50,6 +50,8 @@ export async function filterTopSales() {
       console.log(filteredVideogames);
       return filteredVideogames;
     });
+    console.log(filterGames)
+    return filterGames;
 }
 
 export async function filterTopRating() {
