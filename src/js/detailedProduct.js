@@ -1,25 +1,43 @@
-function createProductHeaderSection() {
+const apiUrl = "http://localhost:3000/videogames"
+
+const index = 1;
+async function fetchJsonData (index){
+    const videogame = await fetch (`${apiUrl}/${index}`)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data)
+            return data;
+        })
+        .catch(error => console.error("No se han podido recuperar los datos", error) )
+
+    return videogame;
+}
+
+function createProductHeaderSection(game) {
+    console.log(game)
+
     let productHeaderContainer = document.createElement("div");
     productHeaderContainer.id ="detailed-product-header-container";
     productHeaderContainer.classList.add("detailed-product-containers");
 
     let imageLandscape = document.createElement("img");
+
     imageLandscape.id = "detailed-product-image";
-    imageLandscape.alt = "witcherBackground";
-    imageLandscape.src = "../../Witcher.png";
+    imageLandscape.alt = game.image.imageAlt;
+    imageLandscape.src = game.image.url;
 
     productHeaderContainer.appendChild(imageLandscape);
 
     return productHeaderContainer;
 }
 
-function createProductFooterSection() {
+function createProductFooterSection(game) {
     let productFooterContainer = document.createElement("div");
     productFooterContainer.id = "detailed-product-footer-container";
     productFooterContainer.classList.add("detailed-product-containers");
 
     let priceElement = document.createElement("h2");
-    priceElement.textContent = "19.00$"
+    priceElement.textContent = game.price;
 
     let addToCartElement = document.createElement("div");
     addToCartElement.id = "detailed-product-shopping-container"
@@ -41,7 +59,7 @@ function createProductFooterSection() {
     return productFooterContainer;
 }
 
-function createProductInfoSection() {
+function createProductInfoSection(game) {
     //Create Info Container
     let productInfoContainer = document.createElement("div");
     productInfoContainer.id = "detailed-product-info-container";
@@ -52,13 +70,13 @@ function createProductInfoSection() {
     informationContainer.id="detailed-product-info-left";
 
     let gameTitleElement = document.createElement("h2");
-    gameTitleElement.textContent = "The Witcher 3";
+    gameTitleElement.textContent = game.game;
     
     let gameDeveloperElement = document.createElement("p");
-    gameDeveloperElement.textContent = "CD Projeckt Red";
+    gameDeveloperElement.textContent = game.developer;
 
     let gameReleaseElement = document.createElement("p");
-    gameReleaseElement.textContent = "May 18th 2015";
+    gameReleaseElement.textContent = game.release;
 
     //Append Created Information texts to Left Info Container
     informationContainer.appendChild(gameTitleElement);
@@ -91,9 +109,11 @@ function createProductInfoSection() {
     return productInfoContainer;
 }
 
-function generateDetailedProduct() {
+async function generateDetailedProduct(index) {
     const bodyElement = document.body;
     const mainElement = document.createElement("main");
+
+    const detailedVideogame = await fetchJsonData(index)
 
     const detailedProductFatherElement = document.createElement("section");
     detailedProductFatherElement.id = "detailed-product";
@@ -101,12 +121,12 @@ function generateDetailedProduct() {
     let productBackground = document.createElement("div");
     productBackground.id= "detailed-product-background"
 
-    const headerSection = createProductHeaderSection();
-    const infoSection = createProductInfoSection();
-    const footerSection = createProductFooterSection();
+    const headerSection = createProductHeaderSection(detailedVideogame);
+    const infoSection = createProductInfoSection(detailedVideogame);
+    const footerSection = createProductFooterSection(detailedVideogame);
 
     let gameDescriptionElement = document.createElement("p");
-    gameDescriptionElement.textContent = "The monster slayer Geralt of Rivia must find his adoptive daughter who is being pursued by the Wild Hunt, and prevent the White Frost from bringing about the end of the world.";
+    gameDescriptionElement.textContent = detailedVideogame.description;
     gameDescriptionElement.classList.add("detailed-product-containers");
 
     productBackground.appendChild(headerSection);
@@ -120,4 +140,4 @@ function generateDetailedProduct() {
     bodyElement.appendChild(mainElement)
 }
 
-generateDetailedProduct();
+generateDetailedProduct(index);
