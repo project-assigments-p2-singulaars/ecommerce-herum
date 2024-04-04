@@ -14,7 +14,7 @@
                     "url": "../img/baldursgate3.webp"
                 },
             "developer": "Larian StudiosPublisher",
-            "release date": "August, 03, 2023",
+            "release": "August, 03, 2023",
             "genres": ["Isometric", "Third-Person", "Turn-Based", "Role-Playing"],
             "platforms": ["Mac","PC","PlayStation 5", "Xbox Series X/S"],
             "tags": ["Top 10", "Popular Games", "Discount"]
@@ -33,7 +33,7 @@
                     "url": "../img/finalfantasyviirebirth.webp"
                 },
              "developer": "Square Enix",
-             "release date": "February, 29, 2024",
+             "release": "February, 29, 2024",
              "genres": ["Action", "Role-Playing"],
              "platforms": ["PlayStation 5"],
              "tags": ["Top 10", "Popular Games", "Discount"]  
@@ -51,7 +51,7 @@
                     "url": "../img/eldenring.webp"
                 },
              "developer": "FromSoftware",
-             "release date": "February, 25, 2022",
+             "release": "February, 25, 2022",
              "genres": ["Third-Person", "Action","Open World","Role-Playing"],
              "platforms": ["PC","PlayStation 4","PlayStation 5","Xbox One","Xbox Series X/S"],
              "tags": ["Top 10", "Popular Games"]  
@@ -69,7 +69,7 @@
                     "url": "../img/cyberpunk2077.webp"
                 },
              "developer": "CD Projekt RED",
-             "release date": "December, 10, 2020",
+             "release": "December, 10, 2020",
              "genres": ["First-Person", "Action","Shooter","Role-Playing"],
              "platforms": ["Google Stadia","PC","PlayStation 4","PlayStation 5","Xbox One","Xbox Series X/S"],
              "tags": ["Popular Games", "Discount"]  
@@ -87,7 +87,7 @@
                     "url": "../img/portal2.webp"
                 },
              "developer": "Valve Corporation",
-             "release date": "April, 19, 2011",
+             "release": "April, 19, 2011",
              "genres": ["First-Person", "Platform", "Puzzle"],
              "platforms": ["Linux","PC", "Mac","PlayStation 3","Nintendo Switch","Xbox 360"],
              "tags": ["Top 10","Popular Games", "Discount"]  
@@ -105,7 +105,7 @@
                    "url": "../img/reddeadredemption2.webp"
                 },
              "developer": "Rockstar Studios",
-             "release date": "October, 26, 2018",
+             "release": "October, 26, 2018",
              "genres": ["First-Person","Third-Person", "Action", "Adventure", "Open World", "Shooter"],
              "platforms": ["Google Stadia","PC","PlayStation 4","Xbox One"],
              "tags": ["Top 10","Popular Games"]  
