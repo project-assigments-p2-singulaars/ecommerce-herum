@@ -1,3 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+
+:root {
+  /* colors */
+  --color-main-bg: #000c14;
+  --color-secondary: #fa720f;
+  --font-color: #000c14;
+
+  /* fonts */
+  --font-main: "League Spartan";
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -13,6 +25,7 @@ body {
   align-items: center;
   flex-direction: column;
   width: 100%;
+  font-family: League Spartan !important;
 }
 
 #landing {
@@ -21,6 +34,7 @@ body {
   align-items: center;
   flex-direction: column;
   width: 100%;
+  
 }
 
 #welcome {
@@ -33,23 +47,25 @@ body {
 
 #welcome h2 {
   font-size: 5vw;
-  margin-bottom: 0.1rem;
+  margin-top: 1.2rem;
 }
 
 #welcome h2 span {
   color: #fa720f;
+  
 }
 
 #welcome hr {
-  width: 45vw;
+  width: 50%;
   background-color: #fa720f;
   border: none;
   height: 0.2rem;
+  margin-bottom: .5rem;
 }
 
 #welcome p {
-  margin: 10vw;
-  text-align: left;
+  margin: 1.65rem;
+  text-align: center;
   width: 100%;
 }
 
@@ -58,6 +74,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: 1rem;
 }
 
 #card img {
