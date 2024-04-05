@@ -1,4 +1,4 @@
-const maxGames = 4;
+const maxGames = 6;
 
 import { fetchData, filterTopRating, filterTopSales } from "./fetch.js";
 import { generateFooter } from "./footer.js";
@@ -134,11 +134,13 @@ async function generateHomeContent() {
   createHeader();
 
   let topSaleGames = await filterTopSales();
+  let topRatedGames = await filterTopRating();
+
   console.log(topSaleGames);
   let mainSection = document.createElement("main");
 
   let landingElement = createLandingSection();
-  let ratingElement = await createRatedGameElement(topSaleGames);
+  let ratingElement = await createRatedGameElement(topRatedGames);
   let salesElement = await createOnSaleElement(topSaleGames);
 
   mainSection.append(landingElement, ratingElement, salesElement);
