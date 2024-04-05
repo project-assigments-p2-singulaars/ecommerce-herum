@@ -23,10 +23,15 @@ nav{
     align-items: flex-end;
 }
 
+header {
+    width: 100%;
+}
+
 #headerSection{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 1rem;
 }
 .hamburguerButton{
    width: 26.72px;

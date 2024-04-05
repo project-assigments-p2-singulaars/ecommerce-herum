@@ -5,6 +5,8 @@ import {
     filterTopRating,
     filterTopSales,
 } from "./fetch.js"
+import { generateFooter } from "./footer.js";
+import { createHeader } from "./header.js";
 
 function createGameImage(videogame) {
     let gameImage = document.createElement("img");
@@ -132,6 +134,7 @@ async function createOnSaleElement(videogames) {
 
 async function generateHomeContent() {
     const bodyElement = document.body;
+    createHeader();
 
     let topSaleGames = await filterTopSales();
     console.log(topSaleGames)
@@ -144,6 +147,7 @@ async function generateHomeContent() {
     mainSection.append(landingElement, ratingElement, salesElement);
 
     bodyElement.appendChild(mainSection);
+    generateFooter();
 }
 
 generateHomeContent();

@@ -60,7 +60,7 @@ export function generateFooter () {
     //Right Container
     let footerRightContainer = document.createElement("div");
     footerRightContainer.id = "footer-location";
-    footerRightContainer.classList.add = "footer-contact-section";
+    footerRightContainer.classList.add("footer-contact-section");
 
     let findUsTitle = document.createElement("p");
     findUsTitle.textContent = "Find us";
