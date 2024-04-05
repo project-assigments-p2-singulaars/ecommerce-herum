@@ -92,7 +92,11 @@ body{
 }
 
 .detailed-product-containers {
-    width: 90%
+    width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 3rem;
+    /* white-space: wrap; */
 }
 
 .detailed-product-icons {

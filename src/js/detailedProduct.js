@@ -1,6 +1,7 @@
 const apiUrl = "http://localhost:3000/videogames"
 
-const index = 1;
+const index = sessionStorage.getItem("detailedVideogame");
+// const index = 2;
 async function fetchJsonData (index){
     const videogame = await fetch (`${apiUrl}/${index}`)
         .then(response => response.json())
