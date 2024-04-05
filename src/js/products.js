@@ -139,6 +139,11 @@ function createGameElement(videogame) {
 
   gameContainer.append(gameImage, priceContainer);
 
+  gameContainer.addEventListener("click",() => {
+    window.open("../templates/detailedProduct.html","_self");
+    sessionStorage.setItem("detailedVideogame", videogame.id)
+  })
+
   return gameContainer;
 }
 
