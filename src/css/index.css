@@ -80,6 +80,7 @@ body {
   flex-direction: column;
   margin-top: 70px;
   width: 90%;
+  margin-left: 1rem;
 }
 
 #top-rating-catalog {
@@ -128,6 +129,7 @@ body {
   flex-direction: column;
   margin-top: 40px;
   width: 90%;
+  margin-left: 1rem;
 }
 
 #on-sale-catalog {

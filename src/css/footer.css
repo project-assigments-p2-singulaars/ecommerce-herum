@@ -34,17 +34,23 @@ footer a {
 footer hr {
     background-color: white;
     padding: 0.02rem;
-    width: 90%;
-    margin-bottom: 1.5rem;
+    width: 70%;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
 }
 
 .footer-contact-section {
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    width: 40%;
+    align-items: center;
 }
 
 .footer-social-container {
     display: flex;
     gap: 1rem;
+    margin-top: 0.5rem;
 }
 
 footer p {

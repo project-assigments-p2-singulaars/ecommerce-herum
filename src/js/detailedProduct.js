@@ -1,3 +1,6 @@
+import { generateFooter } from "./footer.js";
+import { createHeader } from "./header.js";
+
 const apiUrl = "http://localhost:3000/videogames"
 
 const index = sessionStorage.getItem("detailedVideogame");
@@ -113,6 +116,7 @@ function createProductInfoSection(game) {
 async function generateDetailedProduct(index) {
     const bodyElement = document.body;
     const mainElement = document.createElement("main");
+    createHeader();
 
     const detailedVideogame = await fetchJsonData(index)
 
@@ -139,6 +143,7 @@ async function generateDetailedProduct(index) {
     mainElement.appendChild(detailedProductFatherElement);
 
     bodyElement.appendChild(mainElement)
+    generateFooter();
 }
 
 generateDetailedProduct(index);
