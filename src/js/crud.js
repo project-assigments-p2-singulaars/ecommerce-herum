@@ -28,3 +28,9 @@ export async function addNewGame(gameData) {
     .then((response) => console.log(response.ok))
     .catch((error) => console.log(`Error at addNewGame: ${error}`));
 }
+
+export async function deleteGame(index) {
+  await fetch(`${apiUrl}/${index}`, {
+    method: "DELETE",
+  });
+}
