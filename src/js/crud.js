@@ -34,3 +34,11 @@ export async function deleteGame(index) {
     method: "DELETE",
   });
 }
+
+// POR HACER
+export async function changePartGame (index){
+    await fetch(`${apiUrl}/${index}`, {
+        method: "PUT",
+        body: JSON.stringify({description: 'foo',})
+      });
+    }
