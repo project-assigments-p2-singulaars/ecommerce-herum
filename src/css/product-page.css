@@ -143,6 +143,62 @@ main {
   object-fit: cover;
 }
 
+#addGame-container{
+  background-color: #000c14;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+  font-size: 1.25rem;
+  align-items: center;
+  width: 10.75rem;
+  height: 2.5rem;
+  border: 2px solid #EC6401;
+}
+
+#addGame-container p{
+  font-size: 1.25rem;
+  color: #EC6401;
+  font-weight: bold;
+}
+
+#plus-container{
+  background-color:#EC6401;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+
+#plus-container img{
+  background-color:#EC6401;
+  width: 1.25rem;
+  height: 1.25rem;
+} 
+
+ 
+#editGame-container{
+  background-color:#EC6401;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 30%;
+  display: flex;
+  justify-content: center;
+  border: 2px solid #000c14;
+}
+#editicon{
+  background-color:#EC6401;
+  width: 1.5rem;
+}
+
+#editGame-container img{
+  border:none;
+}
+
 .price-icon-container {
   background-color: var(--color-secondary);
   display: flex;
