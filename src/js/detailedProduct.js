@@ -108,7 +108,7 @@ function createProductInfoSection(game) {
     let pegiLogo = document.createElement("img");
     pegiLogo.classList.add("detailed-product-icons")
     pegiLogo.alt = "PEGI18Icon";
-    pegiLogo.src = "../../PEGI18.svg";
+    pegiLogo.src = game.pegi.url;
 
     let ratingContainer = document.createElement("div");
     ratingContainer.classList.add("rating-container");

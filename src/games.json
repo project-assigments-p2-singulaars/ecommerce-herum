@@ -1,189 +1,247 @@
 {
-   "videogames":
-    [
-       {
-           "id" : 1,
-           "game": "Baldur's Gate III",
-           "description": "An ancient evil has returned to Baldur's Gate, intent on devouring it from the inside out. The fate of Faerun lies in your hands. Alone, you may resist. But together, you can overcome.",
-           "price": "59.99€",
-           "pegi": {
-            "imageAlt": "",
-            "url": "."
-           },
-           "rating": 9.4,
-           "image": 
-                {
-                    "imageAlt": "Baldur's 3 image",
-                    "url": "../img/baldursgate3.webp"
-                },
-            "developer": "Larian Studios",
-            "release": "August, 03, 2023",
-            "genres": ["Isometric", "Third-Person", "Turn-Based", "Role-Playing"],
-            "platforms": ["Mac","PC","PlayStation 5", "Xbox Series X/S"],
-            "tags": ["Top 10", "Popular Games", "Discount"]
-            
-        },
-        {
-            "id" : 2,
-            "game": "Final Fantasy VII Rebirth",
-            "description": "Final Fantasy VII Rebirth is the highly anticipated new story in the Final Fantasy VII remake project, a reimagining of the iconic original game into three standalone titles by its original creators. In this game, Cloud and his comrades escape the city of Midgar in pursuit of the fallen hero, Sephiroth – as they travel across the world, they find themselves on a journey that will decide the fate of the planet. Players will enjoy various new elements as the story unfolds, culminating in the party’s journey to The Forgotten Capital from the original Final Fantasy VII.",
-            "price": "79.90€",
-            "pegi": 16,
-            "rating": 9.2,
-            "image": 
-                {
-                    "imageAlt": "Final Fantasy VII Rebirth image",
-                    "url": "../img/finalfantasyviirebirth.webp"
-                },
-             "developer": "Square Enix",
-             "release": "February, 29, 2024",
-             "genres": ["Action", "Role-Playing"],
-             "platforms": ["PlayStation 5"],
-             "tags": ["Top 10", "Popular Games", "Discount"]  
-        },
-        {
-            "id" : 3,
-            "game": "Elden Ring",
-            "description": "The Golden Order has been broken. Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring and become an Elden Lord in the Lands Between. In the Lands Between ruled by Queen Marika the Eternal, the Elden Ring, the source of the Erdtree, has been shattered. Marika's offspring, demigods all, claimed the shards of the Elden Ring known as the Great Runes, and the mad taint of their newfound strength triggered a war: The Shattering. A war that meant abandonment by the Greater Will. And now the guidance of grace will be brought to the Tarnished who were spurned by the grace of gold and exiled from the Lands Between. Ye dead who yet live, your grace long lost, follow the path to the Lands Between beyond the foggy sea to stand before the Elden Ring. And become the Elden Lord.",
-            "price": "59.99€",
-            "pegi": 18,
-            "rating": 9.3,
-            "image": 
-                {
-                    "imageAlt": "Elden Ring image",
-                    "url": "../img/eldenring.webp"
-                },
-             "developer": "FromSoftware",
-             "release": "February, 25, 2022",
-             "genres": ["Third-Person", "Action","Open World","Role-Playing"],
-             "platforms": ["PC","PlayStation 4","PlayStation 5","Xbox One","Xbox Series X/S"],
-             "tags": ["Top 10", "Popular Games"]  
-        },
-        {
-            "id" : 4,
-            "game": "Cyberpunk 2077",
-            "description": "Cyberpunk 2077 is an open-world, action-adventure story set in Night City, a megalopolis obsessed with power, glamour and body modification. You play as V, a mercenary outlaw going after a one-of-a-kind implant that is the key to immortality.",
-            "price": "29.99€",
-            "pegi": 18,
-            "rating": 8.1,
-            "image": 
-                {
-                    "imageAlt": "Cyberpunk 2077 image",
-                    "url": "../img/cyberpunk2077.webp"
-                },
-             "developer": "CD Projekt RED",
-             "release": "December, 10, 2020",
-             "genres": ["First-Person", "Action","Shooter","Role-Playing"],
-             "platforms": ["Google Stadia","PC","PlayStation 4","PlayStation 5","Xbox One","Xbox Series X/S"],
-             "tags": ["Popular Games", "Discount"]  
-        },
-        {
-            "id" : 5,
-            "game": "Portal 2",
-            "description": "Portal 2 draws from the award-winning formula of innovative gameplay, story, and music that earned the original Portal over 70 industry accolades and created a cult following. The single-player portion of Portal 2 introduces a cast of dynamic new characters, a host of fresh puzzle elements, and a much larger set of devious test chambers. Players will explore never-before-seen areas of the Aperture Science Labs and be reunited with GLaDOS, the occasionally murderous computer companion who guided them through the original game. The game’s two-player cooperative mode features its own entirely separate campaign with a unique story, test chambers, and two new player characters. This new mode forces players to reconsider everything they thought they knew about portals. Success will require them to not just act cooperatively, but to think cooperatively.",
-            "price": "9.75€",
-            "pegi": 12,
-            "rating": 9.1,
-            "image": 
-                {
-                    "imageAlt": "Portal 2 image",
-                    "url": "../img/portal2.webp"
-                },
-             "developer": "Valve Corporation",
-             "release": "April, 19, 2011",
-             "genres": ["First-Person", "Platform", "Puzzle"],
-             "platforms": ["Linux","PC", "Mac","PlayStation 3","Nintendo Switch","Xbox 360"],
-             "tags": ["Top 10","Popular Games", "Discount"]  
-        },
-        {
-            "id" : 6,
-            "game": "Red Dead Redemption 2",
-            "description": "Red Dead Redemption 2 is an epic tale of life in America's unforgiving heartland. The game's vast and atmospheric world will also provide the foundation for a brand new online multiplayer experience.",
-            "price": "59.99€",
-            "pegi": 18,
-            "rating": 9.3,
-            "image": 
-                {
-                   "imageAlt": "Red Dead Redemption 2 image",
-                   "url": "../img/reddeadredemption2.webp"
-                },
-             "developer": "Rockstar Studios",
-             "release": "October, 26, 2018",
-             "genres": ["First-Person","Third-Person", "Action", "Adventure", "Open World", "Shooter"],
-             "platforms": ["Google Stadia","PC","PlayStation 4","Xbox One"],
-             "tags": ["Top 10","Popular Games"]  
-        },
-        {
-            "id" : 7,
-            "game": "Stardew Valley",
-            "description": "You've inherited your grandfather's old farm plot in Stardew Valley. Armed with hand-me-down tools and a few coins, you set out to begin your new life. Can you learn to live off the land and turn these overgrown fields into a thriving home? It won't be easy. Ever since Joja Corporation came to town, the old ways of life have all but disappeared. The community center, once the town's most vibrant hub of activity, now lies in shambles. But the valley seems full of opportunity. With a little dedication, you might just be the one to restore Stardew Valley to greatness!",
-            "price": "13.99€",
-            "pegi": 12,
-            "rating": 8.8,
-            "image": 
-                {
-                   "imageAlt": "Stardew Valley image",
-                   "url": "../img/stardewValley.webp"
-                },
-             "developer": "ConcernedApe",
-             "release": "February 26, 2016",
-             "genres": ["Top-Down", "Role-Playing", "Simulation"],
-             "platforms": ["Linux", "Mac", "Mobile", "Nintendo Switch", "PC", "PlayStation 4", "PlayStation Vita", "Xbox One"],
-             "tags": ["Popular Games"]  
-        },
-        {
-            "id" : 8,
-            "game": "The Witcher 3: Wild Hunt",
-            "description": "In The Witcher 3 an ancient evil stirs, awakening. An evil that sows terror and abducts the young. An evil whose name is spoken only in whispers: the Wild Hunt. Led by four wraith commanders, this ravenous band of phantoms is the ultimate predator and has been for centuries. Its quarry: humans.",
-            "price": "29.99€",
-            "pegi": 18,
-            "rating": 9.4,
-            "image": 
-                {
-                   "imageAlt": "The Witcher 3 image",
-                   "url": "../img/witcher3.webp"
-                },
-             "developer": "CD Projekt RED",
-             "release": "May 19, 2015",
-             "genres": ["Third-Person", "Action", "Open World", "Role-Playing"],
-             "platforms": ["Nintendo Switch", "PC", "PlayStation 4", "PlayStation 5", "Xbox One", "Xbox Series X/S"],
-             "tags": ["Top 10","Popular Games"]  
-        },
-        {
-            "id" : 9,
-            "game": "God of War: Ragnarök",
-            "description": "Kratos and Atreus must journey to each of the Nine Realms in search of answers as they prepare for the prophesied battle that will end the world. Together, Kratos and Atreus venture deep into the Nine Realms in search of answers as Asgardian forces prepare for war. Along the way they will explore stunning, mythical landscapes, gather allies from across the realms and face fearsome enemies in the form of Norse gods and monsters. As the threat of Ragnarök grows ever closer, Kratos and Atreus find themselves choosing between the safety of their family and the safety of the realms...",
-            "price": "79.99€",
-            "pegi": 18,
-            "rating": 9.2,
-            "image": 
-                {
-                   "imageAlt": "Gd of war Ragnarok image",
-                   "url": "../img/godWarRagnarok.webp"
-                },
-             "developer": "SIE Santa Monica Studio",
-             "release": "November 09, 2022",
-             "genres": ["Third-Person", "Action", "Adventure", "Hack and Slash"],
-             "platforms": ["PlayStation 4", "PlayStation 5"],
-             "tags": ["Top 10"]  
-        },
-        {
-            "id" : 10,
-            "game": "Helldivers 2",
-            "description": "Time to take out the alien trash. Join the Helldivers to fight for freedom across a hostile galaxy in third-person shooter operations.",
-            "price": "39.99€",
-            "pegi": 18,
-            "rating": 8.6,
-            "image": 
-                {
-                   "imageAlt": "Helldivers 2 image",
-                   "url": "../img/helldivers2.webp"
-                },
-             "developer": "Arrowhead Game Studios",
-             "release": "February 08, 2024",
-             "genres": ["Third-Person", "Action", "Shooter"],
-             "platforms": ["PC", "PlayStation 5"],
-             "tags": ["Popular Games"]  
-        }
-    ]
+  "videogames": [
+    {
+      "id": 1,
+      "game": "Baldur's Gate III",
+      "description": "An ancient evil has returned to Baldur's Gate, intent on devouring it from the inside out. The fate of Faerun lies in your hands. Alone, you may resist. But together, you can overcome.",
+      "price": "59.99€",
+      "pegi": {
+        "imageAlt": "PEGI 18 image",
+        "url": "../img/pegi-img/PEGI_18.svg"
+      },
+      "rating": 9.4,
+      "image": {
+        "imageAlt": "Baldur's 3 image",
+        "url": "../img/baldursgate3.webp"
+      },
+      "developer": "Larian Studios",
+      "release": "August, 03, 2023",
+      "genres": ["Isometric", "Third-Person", "Turn-Based", "Role-Playing"],
+      "platforms": ["Mac", "PC", "PlayStation 5", "Xbox Series X/S"],
+      "tags": ["Top 10", "Popular Games", "Discount"]
+    },
+    {
+      "id": 2,
+      "game": "Final Fantasy VII Rebirth",
+      "description": "Final Fantasy VII Rebirth is the highly anticipated new story in the Final Fantasy VII remake project, a reimagining of the iconic original game into three standalone titles by its original creators. In this game, Cloud and his comrades escape the city of Midgar in pursuit of the fallen hero, Sephiroth – as they travel across the world, they find themselves on a journey that will decide the fate of the planet. Players will enjoy various new elements as the story unfolds, culminating in the party’s journey to The Forgotten Capital from the original Final Fantasy VII.",
+      "price": "79.90€",
+      "pegi": {
+        "imageAlt": "PEGI 16 image",
+        "url": "../img/pegi-img/PEGI_16.svg"
+      },
+      "rating": 9.2,
+      "image": {
+        "imageAlt": "Final Fantasy VII Rebirth image",
+        "url": "../img/finalfantasyviirebirth.webp"
+      },
+      "developer": "Square Enix",
+      "release": "February, 29, 2024",
+      "genres": ["Action", "Role-Playing"],
+      "platforms": ["PlayStation 5"],
+      "tags": ["Top 10", "Popular Games", "Discount"]
+    },
+    {
+      "id": 3,
+      "game": "Elden Ring",
+      "description": "In the Lands Between ruled by Queen Marika the Eternal, the Elden Ring, the source of the Erdtree, has been shattered. Marika's offspring, demigods all, claimed the shards of the Elden Ring known as the Great Runes, and the mad taint of their newfound strength triggered a war: The Shattering. A war that meant abandonment by the Greater Will. And now the guidance of grace will be brought to the Tarnished who were spurned by the grace of gold and exiled from the Lands Between. Ye dead who yet live, your grace long lost, follow the path to the Lands Between beyond the foggy sea to stand before the Elden Ring. And become the Elden Lord.",
+      "price": "59.99€",
+      "pegi": {
+        "imageAlt": "PEGI 18 image",
+        "url": "../img/pegi-img/PEGI_18.svg"
+      },
+      "rating": 9.3,
+      "image": {
+        "imageAlt": "Elden Ring image",
+        "url": "../img/eldenring.webp"
+      },
+      "developer": "FromSoftware",
+      "release": "February, 25, 2022",
+      "genres": ["Third-Person", "Action", "Open World", "Role-Playing"],
+      "platforms": [
+        "PC",
+        "PlayStation 4",
+        "PlayStation 5",
+        "Xbox One",
+        "Xbox Series X/S"
+      ],
+      "tags": ["Top 10", "Popular Games"]
+    },
+    {
+      "id": 4,
+      "game": "Cyberpunk 2077",
+      "description": "Cyberpunk 2077 is an open-world, action-adventure story set in Night City, a megalopolis obsessed with power, glamour and body modification. You play as V, a mercenary outlaw going after a one-of-a-kind implant that is the key to immortality.",
+      "price": "29.99€",
+      "pegi": {
+        "imageAlt": "PEGI 18 image",
+        "url": "../img/pegi-img/PEGI_18.svg"
+      },
+      "rating": 8.1,
+      "image": {
+        "imageAlt": "Cyberpunk 2077 image",
+        "url": "../img/cyberpunk2077.webp"
+      },
+      "developer": "CD Projekt RED",
+      "release": "December, 10, 2020",
+      "genres": ["First-Person", "Action", "Shooter", "Role-Playing"],
+      "platforms": [
+        "Google Stadia",
+        "PC",
+        "PlayStation 4",
+        "PlayStation 5",
+        "Xbox One",
+        "Xbox Series X/S"
+      ],
+      "tags": ["Popular Games", "Discount"]
+    },
+    {
+      "id": 5,
+      "game": "Portal 2",
+      "description": "Players will explore never-before-seen areas of the Aperture Science Labs and be reunited with GLaDOS, the occasionally murderous computer companion who guided them through the original game. The game’s two-player cooperative mode features its own entirely separate campaign with a unique story, test chambers, and two new player characters. This new mode forces players to reconsider everything they thought they knew about portals. Success will require them to not just act cooperatively, but to think cooperatively.",
+      "price": "9.75€",
+      "pegi": {
+        "imageAlt": "PEGI 12 image",
+        "url": "../img/pegi-img/PEGI_12.svg"
+      },
+      "rating": 9.1,
+      "image": {
+        "imageAlt": "Portal 2 image",
+        "url": "../img/portal2.webp"
+      },
+      "developer": "Valve Corporation",
+      "release": "April, 19, 2011",
+      "genres": ["First-Person", "Platform", "Puzzle"],
+      "platforms": [
+        "Linux",
+        "PC",
+        "Mac",
+        "PlayStation 3",
+        "Nintendo Switch",
+        "Xbox 360"
+      ],
+      "tags": ["Top 10", "Popular Games", "Discount"]
+    },
+    {
+      "id": 6,
+      "game": "Red Dead Redemption 2",
+      "description": "Red Dead Redemption 2 is an epic tale of life in America's unforgiving heartland. The game's vast and atmospheric world will also provide the foundation for a brand new online multiplayer experience.",
+      "price": "59.99€",
+      "pegi": {
+        "imageAlt": "PEGI 18 image",
+        "url": "../img/pegi-img/PEGI_18.svg"
+      },
+      "rating": 9.3,
+      "image": {
+        "imageAlt": "Red Dead Redemption 2 image",
+        "url": "../img/reddeadredemption2.webp"
+      },
+      "developer": "Rockstar Studios",
+      "release": "October, 26, 2018",
+      "genres": [
+        "First-Person",
+        "Third-Person",
+        "Action",
+        "Adventure",
+        "Open World",
+        "Shooter"
+      ],
+      "platforms": ["Google Stadia", "PC", "PlayStation 4", "Xbox One"],
+      "tags": ["Top 10", "Popular Games"]
+    },
+    {
+      "id": 7,
+      "game": "Stardew Valley",
+      "description": "You've inherited your grandfather's old farm plot in Stardew Valley. Armed with hand-me-down tools and a few coins, you set out to begin your new life. Can you learn to live off the land and turn these overgrown fields into a thriving home? It won't be easy. Ever since Joja Corporation came to town, the old ways of life have all but disappeared. The community center, once the town's most vibrant hub of activity, now lies in shambles. But the valley seems full of opportunity. With a little dedication, you might just be the one to restore Stardew Valley to greatness!",
+      "price": "13.99€",
+      "pegi": {
+        "imageAlt": "PEGI 12 image",
+        "url": "../img/pegi-img/PEGI_12.svg"
+      },
+      "rating": 8.8,
+      "image": {
+        "imageAlt": "Stardew Valley image",
+        "url": "../img/stardewValley.webp"
+      },
+      "developer": "ConcernedApe",
+      "release": "February 26, 2016",
+      "genres": ["Top-Down", "Role-Playing", "Simulation"],
+      "platforms": [
+        "Linux",
+        "Mac",
+        "Mobile",
+        "Nintendo Switch",
+        "PC",
+        "PlayStation 4",
+        "PlayStation Vita",
+        "Xbox One"
+      ],
+      "tags": ["Popular Games"]
+    },
+    {
+      "id": 8,
+      "game": "The Witcher 3: Wild Hunt",
+      "description": "In The Witcher 3 an ancient evil stirs, awakening. An evil that sows terror and abducts the young. An evil whose name is spoken only in whispers: the Wild Hunt. Led by four wraith commanders, this ravenous band of phantoms is the ultimate predator and has been for centuries. Its quarry: humans.",
+      "price": "29.99€",
+      "pegi": {
+        "imageAlt": "PEGI 18 image",
+        "url": "../img/pegi-img/PEGI_18.svg"
+      },
+      "rating": 9.4,
+      "image": {
+        "imageAlt": "The Witcher 3 image",
+        "url": "../img/witcher3.webp"
+      },
+      "developer": "CD Projekt RED",
+      "release": "May 19, 2015",
+      "genres": ["Third-Person", "Action", "Open World", "Role-Playing"],
+      "platforms": [
+        "Nintendo Switch",
+        "PC",
+        "PlayStation 4",
+        "PlayStation 5",
+        "Xbox One",
+        "Xbox Series X/S"
+      ],
+      "tags": ["Top 10", "Popular Games"]
+    },
+    {
+      "id": 9,
+      "game": "God of War: Ragnarök",
+      "description": "Kratos and Atreus must journey to each of the Nine Realms in search of answers as they prepare for the prophesied battle that will end the world. Together, Kratos and Atreus venture deep into the Nine Realms in search of answers as Asgardian forces prepare for war. Along the way they will explore stunning, mythical landscapes, gather allies from across the realms and face fearsome enemies in the form of Norse gods and monsters. As the threat of Ragnarök grows ever closer, Kratos and Atreus find themselves choosing between the safety of their family and the safety of the realms...",
+      "price": "79.99€",
+      "pegi": {
+        "imageAlt": "PEGI 18 image",
+        "url": "../img/pegi-img/PEGI_18.svg"
+      },
+      "rating": 9.2,
+      "image": {
+        "imageAlt": "Gd of war Ragnarok image",
+        "url": "../img/godWarRagnarok.webp"
+      },
+      "developer": "SIE Santa Monica Studio",
+      "release": "November 09, 2022",
+      "genres": ["Third-Person", "Action", "Adventure", "Hack and Slash"],
+      "platforms": ["PlayStation 4", "PlayStation 5"],
+      "tags": ["Top 10"]
+    },
+    {
+      "id": 10,
+      "game": "Helldivers 2",
+      "description": "Time to take out the alien trash. Join the Helldivers to fight for freedom across a hostile galaxy in third-person shooter operations.",
+      "price": "39.99€",
+      "pegi": {
+        "imageAlt": "PEGI 18 image",
+        "url": "../img/pegi-img/PEGI_18.svg"
+      },
+      "rating": 8.6,
+      "image": {
+        "imageAlt": "Helldivers 2 image",
+        "url": "../img/helldivers2.webp"
+      },
+      "developer": "Arrowhead Game Studios",
+      "release": "February 08, 2024",
+      "genres": ["Third-Person", "Action", "Shooter"],
+      "platforms": ["PC", "PlayStation 5"],
+      "tags": ["Popular Games"]
+    }
+  ]
 }
