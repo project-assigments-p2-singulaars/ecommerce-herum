@@ -18,7 +18,7 @@ body{
 }
 
 #detailed-product {
-    width: 100vw;
+    width: 100%;
     height: 80vh;
     margin-top: 10vh;
     display: flex;
@@ -27,26 +27,29 @@ body{
 }
 
 #detailed-product-background {
+    width: 90%;
+    height: 90%;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     background-color: #1E2E38;
-    width: 90vw;
-    height: 90%;
     border-radius: 2rem;
 }
 
 #detailed-product-header-container {
-    height: 40%;
+    width: 90%;
+    height: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 #detailed-product-image {
-    height: 80%;
-    width: 90%;
-    border-radius: 2rem;
+    height: 100%;
+    width: 100%;
+    border-radius: 24px;
+    object-fit: cover;
 }
 
 #detailed-product-info-container {
@@ -63,14 +66,16 @@ body{
     justify-content: space-evenly;
 }
 
-#detailed-product-info-left p{
-    height: 50%;
-    margin: 0;
-    margin-left: .5rem;
+#detailed-product-info-left h2{
+    font-size: 1.3rem;
+    margin-left: 5%;
 }
 
-#detailed-product-info-left h2{
-    margin-left: .5rem;
+#detailed-product-info-left p{
+    font-size: 0.9rem;
+    height: 50%;
+    margin: 0;
+    margin-left: 5%;
 }
 
 #detailed-product-info-right{
@@ -89,27 +94,30 @@ body{
 #detailed-product-footer-container {
     height: 10%;
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
-    margin-bottom: 1rem;
 }
 
 #detailed-product-shopping-container{
+    height: 60%;
     display: flex;
-    flex-direction: row;
-    width: 40%;
-    border-radius: 2rem;
-    border: solid orange;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
+    flex-direction: row;
+    padding: 0px 15px;
+    width: 40%;
+    border-radius: 36px;
+    border: 2px solid #fa720f;
+}
+
+#detailed-product-shopping-container p{
+    color: #fa720f;
 }
 
 .detailed-product-containers {
     width: 90%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    height: 3rem;
-    /* white-space: wrap; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .detailed-product-icons {
