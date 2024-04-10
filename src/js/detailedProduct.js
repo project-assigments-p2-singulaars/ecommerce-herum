@@ -17,6 +17,20 @@ async function fetchJsonData (index){
     return videogame;
 }
 
+function assignRating(rating) {
+    let ratingClass = "";
+
+    if (rating >= 7.5){
+        ratingClass = "good-rating"
+    } else if (rating >= 4){
+        ratingClass = "average-rating"
+    } else {
+        ratingClass = "bad-rating"
+    }
+
+    return ratingClass;
+}
+
 function createProductHeaderSection(game) {
     console.log(game)
 
@@ -96,14 +110,22 @@ function createProductInfoSection(game) {
     pegiLogo.alt = "PEGI18Icon";
     pegiLogo.src = "../../PEGI18.svg";
 
+    let ratingContainer = document.createElement("div");
+    ratingContainer.classList.add("rating-container");
+    ratingContainer.classList.add(assignRating(game.rating));
+
+    let ratingText = document.createElement("p");
+    ratingText.textContent = game.rating;
+
+    ratingContainer.appendChild(ratingText);
+
     let ratingLogo = document.createElement("img");
     ratingLogo.classList.add("detailed-product-icons")
     ratingLogo.alt = "RatingIcon";
     ratingLogo.src = "../../Rating.svg";
 
     //Append Created Images to Icons Container
-    iconsContainer.appendChild(pegiLogo);
-    iconsContainer.appendChild(ratingLogo);
+    iconsContainer.append(pegiLogo, ratingContainer);
 
     //Append Both Sections to Info Container
     productInfoContainer.appendChild(informationContainer);

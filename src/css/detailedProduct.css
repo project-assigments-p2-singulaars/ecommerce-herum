@@ -1,19 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
 
 :root {
-  /* colors */
-  --color-main-bg: #000c14;
-  --color-secondary: #fa720f;
-  --font-color: #000c14;
+    /* colors */
+    --color-main-bg: #000c14;
+    --color-secondary: #fa720f;
+    --font-color: #000c14;
 
-  /* fonts */
-  --font-main: "League Spartan";
+    /* fonts */
+    --font-main: "League Spartan";
 }
 
-body{
+body {
     background-color: #000C14;
     color: white;
-    margin:0;
+    margin: 0;
     font-family: League Spartan !important;
 }
 
@@ -55,7 +55,7 @@ body{
     flex-direction: row;
 }
 
-#detailed-product-info-left{
+#detailed-product-info-left {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -63,24 +63,24 @@ body{
     justify-content: space-evenly;
 }
 
-#detailed-product-info-left p{
+#detailed-product-info-left p {
     height: 50%;
     margin: 0;
     margin-left: .5rem;
 }
 
-#detailed-product-info-left h2{
+#detailed-product-info-left h2 {
     margin-left: .5rem;
 }
 
-#detailed-product-info-right{
+#detailed-product-info-right {
     display: flex;
     width: 50%;
     align-items: center;
     gap: 1rem;
 }
 
-#detailed-product-description{
+#detailed-product-description {
     height: 20%;
     display: flex;
     align-items: center;
@@ -94,7 +94,7 @@ body{
     margin-bottom: 1rem;
 }
 
-#detailed-product-shopping-container{
+#detailed-product-shopping-container {
     display: flex;
     flex-direction: row;
     width: 40%;
@@ -115,4 +115,31 @@ body{
 .detailed-product-icons {
     height: 70%;
     width: 70%;
+}
+
+#good-rating {
+    background-color: green;
+}
+
+#average-rating {
+    background-color: yellow;
+}
+
+#bad-rating {
+    background-color: red;
+}
+
+.rating-container {
+    height: 40%;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.rating-container p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
 }
