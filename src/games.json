@@ -6,7 +6,10 @@
            "game": "Baldur's Gate III",
            "description": "An ancient evil has returned to Baldur's Gate, intent on devouring it from the inside out. The fate of Faerun lies in your hands. Alone, you may resist. But together, you can overcome.",
            "price": "59.99€",
-           "pegi": 18,
+           "pegi": {
+            "imageAlt": "",
+            "url": "."
+           },
            "rating": 9.4,
            "image": 
                 {
