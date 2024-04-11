@@ -79,7 +79,7 @@ async function generateForm() {
         </div>
         <div class="inputContainer">
             <label for="price">Price:</label>
-            <input type="text" id="price" name="price" value="€" required>
+            <input type="text" id="price" step="0.01" name="price" value="€" required>
         </div>
         <div class="inputContainer">
             <label for="PEGI">Select PEGI:</label>
@@ -94,7 +94,7 @@ async function generateForm() {
         </div>
         <div class="inputContainer">
             <label class="label" for="rating">Rating:</label>
-            <input required class="input" type="number" id="rating" name="rating" min="0" max="10">
+            <input required class="input" step="0.01" type="number" id="rating" name="rating" min="0" max="10">
         </div>
         <div class="inputContainer">
             <label for="imageUpload">Upload Image:</label>
