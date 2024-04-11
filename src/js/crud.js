@@ -54,7 +54,6 @@ export async function deleteGame(index) {
   });
 }
 
-// POR HACER
 export async function editGame (index){
     await fetch(`${apiUrl}/${index}`, {
         method: "PUT",
