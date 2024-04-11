@@ -144,7 +144,7 @@ main {
 
 #addGame-container{
   background-color: #000c14;
-  border-radius: 20px;
+  border-radius: 16px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -168,7 +168,7 @@ main {
   background-color:#EC6401;
   width: 2.5rem;
   height: 2.5rem;
-  border-radius: 30%;
+  border-radius: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
