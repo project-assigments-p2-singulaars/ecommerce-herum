@@ -1,17 +1,72 @@
-<!DOCTYPE html>
-<html lang="en">
+import { addNewGame, adminForm, editGame } from "./crud.js";
+import { generateFooter } from "./footer.js";
+import { createHeader } from "./header.js";
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/form.css">
-    <link rel="stylesheet" href="../css/footer.css">
-</head>
+const apiUrl = "http://localhost:3000/videogames";
+function getPegiValue(pegiValue) {
+  const result = pegiValue.split(" ")[1];
 
-<body>
-    <!-- <h2>ADD NEW VIDEOGAME</h2>
+  return result;
+}
+
+function getReleaseValue(release) {
+  const splitDate = release.split(",");
+
+  let month;
+  switch (splitDate[0]) {
+    case "January":
+      month = "01";
+      break;
+    case "February":
+      month = "02";
+      break;
+    case "March":
+      month = "03";
+      break;
+    case "April":
+      month = "04";
+      break;
+    case "May":
+      month = "05";
+      break;
+    case "June":
+      month = "06";
+      break;
+    case "July":
+      month = "07";
+      break;
+    case "August":
+      month = "08";
+      break;
+    case "September":
+      month = "09";
+      break;
+    case "October":
+      month = "10";
+      break;
+    case "November":
+      month = "11";
+      break;
+    case "December":
+      month = "12";
+      break;
+  }
+
+  let result = `${splitDate[2].trim()}-${month}-${splitDate[1].trim()}`;
+  console.log(result);
+  return result;
+}
+
+async function generateForm() {
+  const mainElement = document.createElement("main");
+  const adminMode = sessionStorage.getItem("adminMode");
+  const gameId = sessionStorage.getItem("detailedVideogame");
+
+  createHeader();
+
+  mainElement.innerHTML = `<h2>${
+    adminMode === "add" ? "ADD NEW GAME" : "EDIT GAME"
+  }</h2>
     <form id="gameForm">
         <div class="inputContainer" >
             <label for="gameName">Game name:</label>
@@ -102,10 +157,75 @@
         <div>
             <input type="submit" name="submit" id="submit">Enviar</input>
         </div>
+    </form>`;
+   
+  document.body.appendChild(mainElement);
+  generateFooter();
 
-    </form> -->
-    <script type="module" src="../js/form.js" defer></script>
-    <!-- <script type="module" src="../js/crud.js" defer></script> -->
-</body>
+  if (adminMode === "edit") {
+    await fetch(`${apiUrl}/${gameId}`)
+      .then((response) => response.json())
+      .then((data) => {
+        const gameTitle = document.getElementById("gameName");
+        const gameDescription = document.getElementById("description");
+        const gamePrice = document.getElementById("price");
+        const gamePegi = document.getElementById("PEGI");
+        const gameRating = document.getElementById("rating");
+        const gameImage = document.getElementById("imageUpload");
+        const gameDeveloper = document.getElementById("developer");
+        const gameRelease = document.getElementById("release");
+        const gameGenres = document.getElementById("genres");
+        const gamePlatforms = document.getElementById("platforms");
+        const gameTags = document.getElementById("tags");
 
-</html>
+        gameTitle.value = data.game;
+        gameDescription.value = data.description;
+        gamePrice.value = data.price;
+        gamePegi.value = getPegiValue(data.pegi.imageAlt);
+        gameRating.value = data.rating;
+        gameImage.value = data.image.url;
+        gameDeveloper.value = data.developer;
+        gameRelease.value = getReleaseValue(data.release);
+
+        for (let index = 0; index < gameGenres.options.length; index++) {
+          gameGenres.options[index].selected =
+            data.genres.indexOf(gameGenres.options[index].value) >= 0;
+        }
+
+        for (let index = 0; index < gamePlatforms.options.length; index++) {
+          gamePlatforms.options[index].selected =
+            data.platforms.indexOf(gamePlatforms.options[index].value) >= 0;
+        }
+
+        for (let index = 0; index < gameTags.options.length; index++) {
+          gameTags.options[index].selected =
+            data.tags.indexOf(gameTags.options[index].value) >= 0;
+        }
+      })
+      .catch((error) => console.log("Error at edit game: ", error));
+  }
+
+    const gameFormElement = document.getElementById("gameForm");
+    console.log(gameFormElement)
+
+    gameFormElement.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      let inputElements;
+
+      if (adminMode === "edit") {
+        inputElements = await adminForm(event, gameId);
+        console.log("EDITTO");
+        await editGame(
+          inputElements,
+          gameId
+        );
+      } else if (adminMode === "add") {
+        console.log("ASDASDAS");
+        inputElements = await adminForm(event, 0);
+
+        await addNewGame(inputElements, 0);
+      }
+    });
+}
+
+generateForm();

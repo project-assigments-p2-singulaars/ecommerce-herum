@@ -1,6 +1,6 @@
 const gameSection = document.getElementById("game-section-container");
 const filters = ["Top Rating", "Categories", "Sales", "Platforms"];
-const allGames = 10;
+const allGames = 14
 
 let gameElements = [];
 
@@ -165,6 +165,7 @@ function createGameElement(videogame) {
     window.open("../templates/form.html","_self");
     
     sessionStorage.setItem("adminMode", 'edit')
+    sessionStorage.setItem("detailedVideogame", videogame.id)
     event.stopPropagation()
   })
 
