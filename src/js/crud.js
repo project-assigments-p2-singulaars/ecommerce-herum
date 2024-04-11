@@ -93,8 +93,16 @@ function parseDate(releaseDate) {
   let resultDate= `${monthText}, ${days}, ${year}`;
   return resultDate;
 }
+export async function getLastId(){
+  const gameId = await fetch(apiUrl).then((response) => response.json()).then((data) => {
+    return (data[data.length -1].id)+1;
+  }).catch((error) => console.error(error))
 
-function adminForm(event) {
+  console.log(gameId)
+  return gameId;
+}
+
+export async function adminForm(event, index) {
   const selectedGenres = Array.from(event.target.genres.selectedOptions).map(
     (option) => option.value
   );
@@ -110,10 +118,10 @@ function adminForm(event) {
   const pegiData = assignPegiImg(event.target.PEGI.value);
   const release = parseDate(event.target.release.value);
 
-  console.log(release)
+  let id = index === 0 ? await getLastId() : index;
 
   const gameData = {
-    id: 11,
+    id: id,
     game: event.target.gameName.value,
     description: event.target.description.value,
     price: event.target.price.value,
@@ -133,14 +141,14 @@ function adminForm(event) {
   return gameData;
 }
 
-const gameFormElement = document.getElementById("gameForm");
+// const gameFormElement = document.getElementById("gameForm");
 
-gameFormElement.addEventListener("submit", (event) => {
-  event.preventDefault();
+// gameFormElement.addEventListener("submit", (event) => {
+//   event.preventDefault();
 
-  const inputElements = adminForm(event);
-  addNewGame(inputElements);
-});
+//   const inputElements = adminForm(event);
+//   addNewGame(inputElements);
+// });
 
 const putTestData = {
   id: 1,
@@ -177,11 +185,11 @@ export async function deleteGame(index) {
   });
 }
 
-export async function editGame(index) {
+export async function editGame(data, index) {
   await fetch(`${apiUrl}/${index}`, {
     method: "PUT",
     headers: { "Content-type": "application/json" },
-    body: JSON.stringify(putTestData),
+    body: JSON.stringify(data),
   })
     .then((response) => console.log(response.ok))
     .catch((error) => console.log(`Error al editGame: ${error}`));
