@@ -101,7 +101,7 @@ async function createOnSaleElement(videogames) {
   onSaleCatalog.id = "on-sale-catalog";
 
   let onSaleTitle = document.createElement("h2");
-  onSaleTitle.textContent = "On Sale";
+  onSaleTitle.textContent = "Top Sales";
 
   let seeMoreSales = document.createElement("p");
   seeMoreSales.textContent = "see more";

@@ -16,10 +16,10 @@ function createHeaderSection(){
     imgAdmin.src="/src/resources/avatarSVG.svg";
     imgAdmin.alt = 'Admin Icon';
 
-    let herumTitle = document.createElement('h1');
+    let herumTitle = document.createElement('a');
     herumTitle.id = 'herumTitle';
     herumTitle.textContent = 'HERUM';
-    // herumTitle.href = "http://127.0.0.1:5500/src/templates/index.html"
+    herumTitle.href = "http://127.0.0.1:5500/src/templates/index.html"
 
     let buttonHamburguer = document.createElement('button');
     buttonHamburguer.id = "idbutton";

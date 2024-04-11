@@ -8,11 +8,12 @@ body{
     background-color: rgba(0, 12, 20, 1);
 }
 
-h1{
+a{
     color: rgba(236, 100, 1, 1);
     font-family: "League Spartan", sans-serif;
     font-size: 24px;
     font-weight: bold;
+    text-decoration: none;
 }
 
 nav{
