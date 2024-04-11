@@ -41,8 +41,12 @@ function createLandingSection() {
   let seeCatalogContainer = document.createElement("div");
   seeCatalogContainer.id = "card";
 
-  let backgroundImage = document.createElement("img");
-  backgroundImage.src = "Rectangle 5 (1).png";
+  let backgroundImage = document.createElement("video");
+  backgroundImage.src = "../img/playIntro.mp4";
+  backgroundImage.autoplay = true;
+  backgroundImage.muted = true;
+  backgroundImage.loop = true;
+  // backgroundImage.src = "../img/homeImage.jpg";
 
   let catalogButton = document.createElement("button");
   catalogButton.textContent = "SEE CATALOG";
@@ -101,7 +105,7 @@ async function createOnSaleElement(videogames) {
   onSaleCatalog.id = "on-sale-catalog";
 
   let onSaleTitle = document.createElement("h2");
-  onSaleTitle.textContent = "On Sale";
+  onSaleTitle.textContent = "Top Sales";
 
   let seeMoreSales = document.createElement("p");
   seeMoreSales.textContent = "see more";
