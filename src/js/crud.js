@@ -1,22 +1,133 @@
 const apiUrl = "http://localhost:3000/videogames";
 
+function assignPegiImg(pegiValue) {
+  let pegiImageAlt;
+  let pegiUrl;
+
+  switch (parseInt(pegiValue)) {
+    case 3:
+      pegiImageAlt = "PEGI 3 Image";
+      pegiUrl = "../img/pegi-img/PEGI_3.svg";
+      break;
+    case 7:
+      pegiImageAlt = "PEGI 7 Image"
+      pegiUrl = "../img/pegi-img/PEGI_7.svg";
+      break;
+    case 12:
+      pegiImageAlt = "PEGI 12 Image"
+      pegiUrl = "../img/pegi-img/PEGI_12.svg";
+      break;
+    case 16:
+      pegiImageAlt = "PEGI 16 Image"
+      pegiUrl = "../img/pegi-img/PEGI_16.svg";
+      break; 
+    case 18:
+      pegiImageAlt = "PEGI 18 Image"
+      pegiUrl = "../img/pegi-img/PEGI_18.svg";
+      break;
+    default:
+      pegiImageAlt = "";
+      pegiUrl = ""
+      break;
+  }
+
+  let pegiData = {
+    imageAlt: pegiImageAlt,
+    url: pegiUrl
+  };
+
+  return pegiData;
+}
+
+function parseDate(releaseDate) {
+  const dates = releaseDate.split("-");
+
+  const year = dates[0];
+  const month = dates[1];
+  const days = dates[2];
+
+  let monthText;
+
+  switch (parseInt(month)) {
+    case 1:
+      monthText = "January";
+      break;
+    case 2:
+      monthText = "February";
+      break;
+    case 3:
+      monthText = "March";
+      break;
+    case 4:
+      monthText = "April";
+      break;
+    case 5:
+      monthText = "May";
+      break;
+    case 6:
+      monthText = "June";
+      break;
+    case 7:
+      monthText = "July";
+      break;
+    case 8:
+      monthText = "August";
+      break;
+    case 9:
+      monthText = "September";
+      break;
+    case 10:
+      monthText = "October";
+      break;
+    case 11:
+      monthText = "November";
+      break;
+    case 12:
+      monthText = "December";
+      break;
+    default:
+      monthText= '';
+      break;
+  }
+
+  let resultDate= `${monthText}, ${days}, ${year}`;
+  return resultDate;
+}
+
 function adminForm(event) {
+  const selectedGenres = Array.from(event.target.genres.selectedOptions).map(
+    (option) => option.value
+  );
+
+  const selectedPlatforms = Array.from(
+    event.target.platforms.selectedOptions
+  ).map((option) => option.value);
+
+  const selectedTags = Array.from(event.target.tags.selectedOptions).map(
+    (option) => option.value
+  );
+
+  const pegiData = assignPegiImg(event.target.PEGI.value);
+  const release = parseDate(event.target.release.value);
+
+  console.log(release)
+
   const gameData = {
-    id: 1,
+    id: 11,
     game: event.target.gameName.value,
     description: event.target.description.value,
     price: event.target.price.value,
-    pegi: event.target.PEGI.value,
+    pegi: pegiData,
     rating: event.target.rating.value,
     image: {
       imageAlt: event.target.gameName.value,
       url: event.target.imageUpload.value,
     },
     developer: event.target.developer.value,
-    release: event.target.release.value,
-    genres: event.target.genres.value,
-    platforms: event.target.platforms.value,
-    tags: event.target.tags.value,
+    release: release,
+    genres: selectedGenres,
+    platforms: selectedPlatforms,
+    tags: selectedTags,
   };
 
   return gameData;
@@ -27,17 +138,8 @@ const gameFormElement = document.getElementById("gameForm");
 gameFormElement.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  // console.log( event, 'event object' );
-
   const inputElements = adminForm(event);
-  console.log(inputElements);
-  const selectedGenres = Array.from(event.target.genres.selectedOptions).map(option => option.value);
-    console.log(selectedGenres);
-  // console.log(event.target.genres.value);
-  // console.log(inputElements);
-
-  const newGameData = {};
-  // addNewGame(gameData);
+  addNewGame(inputElements);
 });
 
 const putTestData = {
@@ -75,12 +177,12 @@ export async function deleteGame(index) {
   });
 }
 
-export async function editGame (index){
-    await fetch(`${apiUrl}/${index}`, {
-        method: "PUT",
-        headers: {'Content-type': 'application/json'},
-        body: JSON.stringify(putTestData)
-    })
-      .then((response) => console.log(response.ok))
-      .catch((error) => console.log(`Error al editGame: ${error}`));
+export async function editGame(index) {
+  await fetch(`${apiUrl}/${index}`, {
+    method: "PUT",
+    headers: { "Content-type": "application/json" },
+    body: JSON.stringify(putTestData),
+  })
+    .then((response) => console.log(response.ok))
+    .catch((error) => console.log(`Error al editGame: ${error}`));
 }
