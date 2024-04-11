@@ -1,0 +1,63 @@
+body {
+    background-color: black;
+}
+
+label {
+    color: #EC6401;
+    margin-left: 1rem;
+    width: 40%;
+}
+
+input {
+    background-color: black;
+    border: 0.1rem solid #9A9A9A;
+    color: white;
+    border-radius: 0.4rem;
+    width: 40%;
+}
+
+textarea {
+    background-color: black;
+    border: 0.1rem solid #9A9A9A;
+    color: white;
+    border-radius: 0.4rem;
+    width: 40%;
+
+}
+
+h2 {
+    color: #EC6401;
+    display: flex;
+    justify-content: center;
+}
+
+select {
+    background-color: black;
+    border: 0.1rem solid #9A9A9A;
+    color: white;
+    border-radius: 0.4rem;
+    width: 42%;
+}
+
+
+#submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    border: 0.1rem solid #9A9A9A;
+    margin: auto;
+    margin-top: 2rem;
+    padding: 0.5rem;
+    width: 20%;
+}
+
+.inputContainer {
+    display: flex;
+    margin-top: 0.8rem;
+}
+
+#gameForm input[type="file"] {
+    background-color: black;
+}

@@ -1,0 +1,19 @@
+{
+  "name": "ecommerce-herum",
+  "version": "1.0.0",
+  "description": "Desarrolla el frontend de una página web una ecommerce, basada en una fake API donde se registran los productos, para simular la interacción con la base de datos y los servicios externos. Esta fake API permitirá al equipo de desarrollo trabajar en el Front-end y en la lógica de la aplicación sin depender de datos reales ni conexiones a sistemas externos. Pertenecerás a un equipo de desarrollo, en el cual deberás desempeñar un rol como developer y llegar a un mínimo producto viable funcional de la aplicación que esté propuesta en el brief de proyecto.",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "vitest",
+    "start": "json-server --watch src/games.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "json-server": "^1.0.0-alpha.23",
+    "vitest": "^1.4.0"
+  }
+}

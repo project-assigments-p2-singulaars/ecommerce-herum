@@ -1,0 +1,60 @@
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+#footer-herum {
+    color: #EC6401;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    }
+
+#footer-herum-general {
+    margin-top: 1rem;
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+#final-line {
+    margin-top: 2rem;
+}
+
+footer hr {
+    background-color: white;
+    padding: 0.02rem;
+    width: 70%;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+}
+
+.footer-contact-section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 40%;
+    align-items: center;
+}
+
+.footer-social-container {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+footer p {
+    color: white;
+    margin-bottom: 0;
+    text-align: center;
+}
