@@ -121,7 +121,7 @@ function createAddGameSection(){
   addGamesContainer.id = 'addGame-container';
 
   addGamesContainer.addEventListener("click",() => {
-    // window.open("../templates/gameForm.html","_self");
+    window.open("../templates/form.html","_self");
     sessionStorage.setItem("adminMode", 'add')
   })
 
@@ -162,7 +162,7 @@ function createGameElement(videogame) {
   //NO FUNCIONA--> EVENT BUBLING
   editGamesContainer.addEventListener("click",(event) => {
     event.preventDefault()
-    // window.open("../templates/gameForm.html","_self");
+    window.open("../templates/form.html","_self");
     
     sessionStorage.setItem("adminMode", 'edit')
     event.stopPropagation()
