@@ -70,7 +70,7 @@ async function generateForm() {
     <form id="gameForm">
         <div class="inputContainer" >
             <label for="gameName">Game name:</label>
-            <input type="text" id="gameName" name="gameName">
+            <input type="text" id="gameName" name="gameName" required>
         </div>
 
         <div class="inputContainer">
@@ -79,11 +79,11 @@ async function generateForm() {
         </div>
         <div class="inputContainer">
             <label for="price">Price:</label>
-            <input type="text" id="price" name="price" value="€">
+            <input type="text" id="price" name="price" value="€" required>
         </div>
         <div class="inputContainer">
             <label for="PEGI">Select PEGI:</label>
-            <select name="PEGI" id="PEGI">
+            <select name="PEGI" id="PEGI" required>
                 <option value="selectPEGI">Select PEGI</option>
                 <option value="3">PEGI 3</option>
                 <option value="7">PEGI 7</option>
@@ -94,23 +94,23 @@ async function generateForm() {
         </div>
         <div class="inputContainer">
             <label class="label" for="rating">Rating:</label>
-            <input class="input" type="number" id="rating" name="rating" min="0" max="10">
+            <input required class="input" type="number" id="rating" name="rating" min="0" max="10">
         </div>
         <div class="inputContainer">
             <label for="imageUpload">Upload Image:</label>
-            <input type="texts  " id="imageUpload" name="imageUpload">
+            <input required type="texts  " id="imageUpload" name="imageUpload">
         </div>
         <div class="inputContainer">
             <label for="developer">Developer:</label>
-            <input class="input" type="text" id="developer" name="developer">
+            <input required class="input" type="text" id="developer" name="developer">
         </div>
         <div class="inputContainer">
             <label for="release">Release:</label>
-            <input type="date" id="release" name="release">
+            <input required type="date" id="release" name="release">
         </div>
         <div class="inputContainer">
             <label for="genres">Genres:</label>
-            <select id="genres" name="genres" multiple>
+            <select required id="genres" name="genres" multiple>
                 <br>
                 <option value="First-Person">First-person</option>
                 <option value="Third-Person">Third-person</option>
@@ -131,7 +131,7 @@ async function generateForm() {
         </div>
         <div class="inputContainer">
             <label for="platforms">Platforms:</label>
-            <select id="platforms" name="platforms" multiple>
+            <select required id="platforms" name="platforms" multiple>
                 <option value="Pc">PC</option>
                 <option value="PlayStation 4">PlayStation 4</option>
                 <option value="PlayStation 5">PlayStation 5</option>
@@ -148,7 +148,7 @@ async function generateForm() {
         </div>
         <div class="inputContainer">
             <label for="tags">Tags:</label>
-            <select id="tags" name="tags" multiple>
+            <select required id="tags" name="tags" multiple>
                 <option value="Top 10">Top 10</option>
                 <option value="Discount">Discount</option>
                 <option value="Popular Games">Popular Games</option>
