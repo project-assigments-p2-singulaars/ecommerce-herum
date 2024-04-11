@@ -116,6 +116,32 @@ function createFilterSection() {
   return filterSection;
 }
 
+function createAddGameSection(){
+  let addGamesContainer = document.createElement('div');
+  addGamesContainer.id = 'addGame-container';
+
+  addGamesContainer.addEventListener("click",() => {
+    // window.open("../templates/gameForm.html","_self");
+    sessionStorage.setItem("adminMode", 'add')
+  })
+
+  let plusAddGamesContainer = document.createElement('div');
+  plusAddGamesContainer.id = 'plus-container';
+
+  let plusAddGamesImage = document.createElement('img');
+  plusAddGamesImage.id = 'plusicon';
+  plusAddGamesImage.src= '../resources/plusicon.svg';
+  plusAddGamesImage.alt= 'plus icon';
+
+  let addGameTag = document.createElement('p');
+  addGameTag.textContent = 'Add Game';
+
+  plusAddGamesContainer.appendChild(plusAddGamesImage);
+  addGamesContainer.append(plusAddGamesContainer,addGameTag);
+
+  return addGamesContainer;
+}
+
 function createGameElement(videogame) {
   let gameContainer = document.createElement("div");
 
@@ -123,6 +149,24 @@ function createGameElement(videogame) {
   let gameImage = document.createElement("img");
   gameImage.src = videogame.image.url;
   gameImage.alt = videogame.image.imageAlt;
+
+  // AÑADIDO BUTTON and image EDIT
+  let editGamesContainer = document.createElement('div');
+  editGamesContainer.id ='editGame-container';
+
+  let editGamesImage = document.createElement('img');
+  editGamesImage.id = 'editicon';
+  editGamesImage.src = '../resources/editpenicon.svg';
+  editGamesImage.alt = 'edit icon';
+ 
+  //NO FUNCIONA--> EVENT BUBLING
+  editGamesContainer.addEventListener("click",(event) => {
+    event.preventDefault()
+    // window.open("../templates/gameForm.html","_self");
+    
+    sessionStorage.setItem("adminMode", 'edit')
+    event.stopPropagation()
+  })
 
   let priceContainer = document.createElement("a");
   priceContainer.classList.add("price-icon-container");
@@ -135,9 +179,11 @@ function createGameElement(videogame) {
   cartLogo.src = "../../assets/icons/car.svg";
   cartLogo.alt = "";
 
+  editGamesContainer.appendChild(editGamesImage);
+
   priceContainer.append(priceTag, cartLogo);
 
-  gameContainer.append(gameImage, priceContainer);
+  gameContainer.append(gameImage, editGamesContainer,priceContainer);
 
   gameContainer.addEventListener("click",() => {
     window.open("../templates/detailedProduct.html","_self");
@@ -186,12 +232,14 @@ async function generateProductSection() {
   mainElement.classList.add("filter-bars-container");
   let searchElement = createSearchBar();
   let filtersElement = createFilterSection();
+  let addGamesElement = createAddGameSection();
   let catalogElement = await createGamesList();
   let seeMoreElement = createSeeMoreSection();
 
   mainElement.append(
     searchElement,
     filtersElement,
+    addGamesElement,
     catalogElement,
     seeMoreElement
   );
